@@ -1,30 +1,16 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import path from "path";
-import { fileURLToPath } from "url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const usingCustomDomain =
-  process.env.CUSTOM_DOMAIN_HOST?.length ||
-  process.env.GITHUB_PAGES === "true" ||
-  process.env.GITHUB_PAGES_CUSTOM_DOMAIN === "true";
-
-const repoBase = process.env.VITE_REPO_BASE?.trim();
-const normalizedRepoBase = repoBase
-  ? repoBase.startsWith("/")
-    ? repoBase.endsWith("/")
-      ? repoBase
-      : `${repoBase}/`
-    : `/${repoBase}/`
-  : null;
-
+// ★ Simple Vite config สำหรับ React + GitHub Pages
 export default defineConfig({
   plugins: [react()],
-  base: "/reallocalforglobal/",
-  // GitHub Pages with a custom domain must be rooted at "/"
-  base: usingCustomDomain || !normalizedRepoBase ? "/" : normalizedRepoBase,
+
+  // ตั้งค่า base path แบบธรรมดา
+  // ถ้า host ที่ GitHub Pages ให้ใส่ /repo-name/
+  // ถ้าใช้ custom domain เช่น krabi.joinjoytravel.com ให้ใส่ "/"
+  base: "/",
+
   build: {
-    outDir: "docs",
+    outDir: "docs", // GitHub Pages ใช้โฟลเดอร์ docs
   },
 });
