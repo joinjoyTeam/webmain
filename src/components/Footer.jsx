@@ -7,7 +7,7 @@ function Footer() {
 
         <a href="/" className="flex flex-col items-center gap-0">
           <img 
-            src="/reallocalforglobal/logo.png"
+            src="/logo.png"
             alt="JoinJoy Logo"
             className="h-14 w-14 mix-blend-multiply"
           />

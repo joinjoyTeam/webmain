@@ -18,7 +18,7 @@ function Navbar() {
       <div className="section-shell flex h-[70px] items-center gap-2 sm:gap-3">
         <div className="flex min-w-0 flex-1 items-center gap-1">
           <img
-            src="/reallocalforglobal/logo.png"
+            src="/logo.png"
             alt="JoinJoy Logo"
             className="h-16 w-16 rounded-full object-contain"
           />
