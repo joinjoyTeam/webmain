@@ -8,8 +8,8 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   plugins: [react()],
-  base: "/reallocalforglobal/",
-  build: {
+  base: "/webmain/",
+ /* build: {
     outDir: "docs",
-  },
+  },*/
 });
