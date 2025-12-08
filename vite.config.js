@@ -8,8 +8,8 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   plugins: [react()],
-  base: "/main/",
+  base: "/",
   build: {
-    outDir: "dist/main",
+    outDir: "dist",
   },
 });
