@@ -4,7 +4,9 @@ import './FilterBar.css';
 function GroupFilters({ groups, selectedGroup, onSelect }) {
   return (
     <div className="filter-row" aria-label="Group filters">
-      <div className="filter-row-title">Groups</div>
+    
+      <span className="focus:outline-none focus:ring-0 inline-flex items-center gap-1 rounded-xl bg-[#1877F2] px-5 py-2 text-base font-semibold text-white shadow-md shadow-[#1877F2]/30 transition ">
+      KRABI HIGHLIGHTS ROUTES</span>
       <div className="filter-row-scroll">
         {groups.map((group) => (
           <button

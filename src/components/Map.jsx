@@ -9,9 +9,9 @@ const MAP_STYLE = 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json
 
 const scoreToStars = (score) => {
   if (score >= 90) return 5;
-  if (score >= 82) return 4;
-  if (score >= 74) return 3;
-  if (score >= 66) return 2;
+  if (score >= 80) return 4;
+  if (score >= 70) return 3;
+  if (score >= 60) return 2;
   return 1;
 };
 
@@ -19,10 +19,10 @@ const prepareLocations = (locations) =>
   locations.map((location) => {
     const baseTags = Array.isArray(location.tags) ? [...location.tags] : [];
     const tags = new Set(baseTags);
-
-    const shuffled = [...SPECIAL_TAGS].sort(() => Math.random() - 0.5);
-    const count = Math.floor(Math.random() * 2) + 1; // 1-2 special tags
-    shuffled.slice(0, count).forEach((tag) => tags.add(tag));
+   
+    //const shuffled = [...SPECIAL_TAGS].sort(() => Math.random() - 0.5);
+    //const count = Math.floor(Math.random() * 2) + 1; // 1-2 special tags
+    //shuffled.slice(0, count).forEach((tag) => tags.add(tag));
 
     const score =
       typeof location.score === 'number' && !Number.isNaN(location.score)
@@ -288,11 +288,11 @@ function Map() {
 
   return (
     <section className="map-section">
-      <div className="krabi-map-topbar">
+      {/* <div className="krabi-map-topbar">
         <span className="krabi-map-badge">JOINJOY PREMIUM ROUTES</span>
         <h3 className="krabi-map-title">Krabi Highlights</h3>
      
-
+     </div> */}
 
       <div className="filter-container" aria-label="Krabi map filters">
       
@@ -314,7 +314,7 @@ function Map() {
           containerRef={filtersRef}
         />
       </div>
- </div>
+
 
 
 

@@ -122,8 +122,8 @@ function Hero() {
 
                 if (el) {
                   const rect = el.getBoundingClientRect();
-                  const offset = 100; // ปรับตามขนาด header ของคุณ
-                  const extraScroll = 80;
+                  const offset = 120; // ปรับตามขนาด header ของคุณ
+                  const extraScroll = 40;
                   window.scrollTo({
                     top: window.scrollY + rect.top - offset + extraScroll,
                     behavior: 'smooth'
