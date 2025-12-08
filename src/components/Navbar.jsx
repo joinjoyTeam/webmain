@@ -1,20 +1,40 @@
-import { useState } from 'react';
+import { useEffect, useState } from "react";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const navLinks = [
-    { href: '#boats', label: 'Boats' },
-    { href: '#experiences', label: 'Experiences' },
-    { href: '#cta', label: 'Start booking' }
+    { href: "#boats", label: "Boats" },
+    { href: "#experiences", label: "Experiences" },
+    { href: "#cta", label: "Start booking" },
   ];
 
-  const whatsappHref = 'https://wa.me/66624290062';
+  const whatsappHref = "https://wa.me/66624290062";
 
   const closeMenu = () => setIsMenuOpen(false);
 
+  // ✅ ระบบซ่อน / แสดง navbar ตามการ scroll
+  useEffect(() => {
+    const controlNavbar = () => {
+      if (window.scrollY > lastScrollY) {
+        setShowNavbar(false); // เลื่อนลง → ซ่อน
+      } else {
+        setShowNavbar(true); // เลื่อนขึ้น → แสดง
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", controlNavbar);
+    return () => window.removeEventListener("scroll", controlNavbar);
+  }, [lastScrollY]);
+
   return (
-    <header className="sticky inset-x-0 top-0 z-[50] border-b border-[#eee] bg-white">
+    <header
+      className={`fixed inset-x-0 top-0 z-[50] border-b border-[#eee] bg-white transition-transform duration-300
+      ${showNavbar ? "translate-y-0" : "-translate-y-full"}`}
+    >
       <div className="section-shell flex h-[70px] items-center gap-2 sm:gap-3">
         <div className="flex min-w-0 flex-1 items-center gap-1">
           <img
@@ -24,14 +44,22 @@ function Navbar() {
           />
 
           <div className="leading-tight">
-            <p className="text-xs font-semibold uppercase tracking-wide text-[#1877F2]">JoinJoy</p>
-            <p className="truncate text-lg font-semibold text-slate-900">Krabi Journeys</p>
+            <p className="text-xs font-semibold uppercase tracking-wide text-[#1877F2]">
+              JoinJoy
+            </p>
+            <p className="truncate text-lg font-semibold text-slate-900">
+              Krabi Journeys
+            </p>
           </div>
         </div>
 
         <nav className="hidden flex-1 items-center justify-center gap-6 text-sm font-medium text-slate-700 md:flex lg:gap-8">
           {navLinks.map((link) => (
-            <a key={link.href} className="transition hover:text-[#1877F2]" href={link.href}>
+            <a
+              key={link.href}
+              className="transition hover:text-[#1877F2]"
+              href={link.href}
+            >
               {link.label}
             </a>
           ))}
@@ -46,6 +74,7 @@ function Navbar() {
           >
             WhatsApp
           </a>
+
           <div className="hidden items-center gap-2 md:flex lg:gap-3">
             <button className="rounded-xl px-4 py-2 text-sm font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/30 transition hover:bg-[#1877F2]/5">
               Log in
@@ -54,14 +83,14 @@ function Navbar() {
               Book with us
             </button>
           </div>
+
           <button
             type="button"
             className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-[#1877F2]/40 hover:text-[#1877F2] md:hidden"
             aria-expanded={isMenuOpen}
-            aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             onClick={() => setIsMenuOpen((prev) => !prev)}
           >
-            <span className="sr-only">{isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -71,9 +100,17 @@ function Navbar() {
               className="h-6 w-6"
             >
               {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
               )}
             </svg>
           </button>
@@ -82,7 +119,9 @@ function Navbar() {
 
       <div
         className={`section-shell origin-top transform-gpu transition-all duration-300 ease-in-out md:hidden ${
-          isMenuOpen ? 'max-h-[520px] scale-y-100 opacity-100 pointer-events-auto' : 'max-h-0 scale-y-95 opacity-0 pointer-events-none'
+          isMenuOpen
+            ? "max-h-[520px] scale-y-100 opacity-100 pointer-events-auto"
+            : "max-h-0 scale-y-95 opacity-0 pointer-events-none"
         }`}
       >
         <div className="mt-2 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-200/70">
@@ -98,6 +137,7 @@ function Navbar() {
               </a>
             ))}
           </div>
+
           <div className="flex flex-col gap-2 border-t border-slate-100 p-4">
             <button className="inline-flex w-full justify-center rounded-xl px-4 py-2 text-sm font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/25 transition hover:bg-[#1877F2]/5">
               Log in

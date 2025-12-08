@@ -2,7 +2,7 @@ import React from 'react';
 import './FilterBar.css';
 
 const OPTIONS = [
-  { key: 'star-5', label: '★★★★★' },
+ { key: 'star-5', label: '★★★★★' },
   { key: 'star-4', label: '★★★★☆' },
   { key: 'star-3', label: '★★★☆☆' },
   { key: 'star-2', label: '★★☆☆☆' },
