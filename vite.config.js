@@ -10,6 +10,6 @@ export default defineConfig({
   plugins: [react()],
   base: "/main/",
   build: {
-    outDir: "docs",
+    outDir: "dist/main",
   },
 });
