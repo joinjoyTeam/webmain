@@ -3,6 +3,7 @@ import ExperienceCard from '../components/ExperienceCard.jsx';
 import Footer from '../components/Footer.jsx';
 import Map from '../components/Map.jsx';
 import '../components/Map.css';
+import FourIslandsCard from '../components/FourIslandsCard.jsx';
 
 // const heroHighlights = [
 //   { title: 'You pick the boat, not the counter', subtitle: 'NO MORE RANDOM BOATS' },
@@ -281,7 +282,17 @@ function Home() {
   return (
     <main>
       <Hero />
-      {/* <ExperienceGrid /> */}
+      
+      {/* 🔹 4 Islands Route Insight */}
+      <section className="bg-[#f7f9fb] py-6 sm:py-10">
+        <div className="section-shell max-w-3xl mx-auto">
+          <FourIslandsCard />
+        </div>
+      </section>
+
+
+
+
       <FleetSection />
       <Footer />
     </main>
