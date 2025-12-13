@@ -38,9 +38,9 @@ const experiences = [
 
 const boats = [
   {
-    name: 'KRABI SEA TOUR',//KRABI SEA TOUR (Warisa Boat)
-    type: 'Join Trip Longtail Boat',//Longtail Boat  
-    capacity: 12,
+    name: 'Join Trip Longtail Boat',//KRABI SEA TOUR (Warisa Boat)
+    type: 'KRABI SEA TOUR',//Longtail Boat   KRABI SEA TOUR
+    capacity: 12, 
     showCapacity: false,   // ✅ แสดงที่นั่ง
     price: 500,
     rating: 4.9,
@@ -55,60 +55,60 @@ const boats = [
     //Half Day 4 Islands Join Trip  \n Talay Waek, Poda, Chicken, \n Phanang Cave 
   },
   {
-    name: 'Peace Travel',//KRABI SEA TOUR (Warisa Boat)
-    type: 'Private Longtail Boat',//Longtail Boat  
+    name: 'Private Longtail Boat',//KRABI SEA TOUR (Warisa Boat)
+    type: 'Peace Travel',//Longtail Boat   Peace Travel
     capacity: 12,
     showCapacity: false,   // ✅ แสดงที่นั่ง
     price: 500,
     rating: 4.9,
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
-    description: 'Private longtail boat, affordable and relaxing.',
-    image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/340726_0.jpg',
+    description: 'Private longtail boat, affordable \n and relaxing.',
+    image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/1765650127108.jpg',
     link: 'https://wa.me/66624290062',
     tags:[],
     buttonLabel: "Check Available"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
   },
   {
-    name: 'Aonang Tour and Travel',//KRABI SEA TOUR (Warisa Boat)
-    type: 'Private Luxury Longtail Boat',//Longtail Boat  
+    name: 'Private Luxury Longtail Boat',//KRABI SEA TOUR (Warisa Boat)
+    type: 'Aonang Tour and Travel',//Longtail Boat  Aonang Tour and Travel
     capacity: 12,
     showCapacity: false,   // ✅ แสดงที่นั่ง
     price: 500,
     rating: 4.9,
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
-    description: 'Private longtail boat with premium comfort, beautiful views, and great photo spots.',
-    image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/340726_0.jpg',
+    description: 'Private longtail boat with premium comfort, beautiful views \n and great photo spots.',
+    image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/S__71000089_0.jpg',
     link: 'https://wa.me/66624290062',
     tags:[],
     buttonLabel: "Check Available"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
   },
   {
-    name: 'Beyond Krabi Tours',//KRABI SEA TOUR (Warisa Boat)
-    type: 'Join Trip Speed Boat',//Longtail Boat  
+    name: 'Join Trip Speed Boat',//KRABI SEA TOUR (Warisa Boat)
+    type: 'Beyond Krabi Tours',//Longtail Boat  Beyond Krabi Tours
     capacity: 12,
     showCapacity: false,   // ✅ แสดงที่นั่ง
     price: 500,
     rating: 4.9,
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
     description: 'Join a speed boat tour to visit Krabi’s top spots quickly and easily.',
-    image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/BeyondKrabiTours.png.png',
+    image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/S__86310919.jpg',
     link: 'https://wa.me/66624290062',
     tags:[],
     buttonLabel: "Check Available"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
   },
   {
-    name: 'Wonderful Tour Krabi',//KRABI SEA TOUR (Warisa Boat)
-    type: 'Private Trip Speed Boat',//Longtail Boat  
+    name: 'Private Trip Speed Boat',//KRABI SEA TOUR (Warisa Boat)
+    type: 'Wonderful Tour Krabi',//Longtail Boat  Wonderful Tour Krabi
     capacity: 12,
     showCapacity: false,   // ✅ แสดงที่นั่ง
     price: 500,
     rating: 4.9,
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
     description: 'High-end private speed boat with comfort, privacy, and stunning photo spots.',
-    image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/340726_0.jpg',
+    image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/1765649975005.jpg',
     link: 'https://wa.me/66624290062',
     tags:[],
     buttonLabel: "Check Available"

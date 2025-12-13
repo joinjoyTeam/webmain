@@ -2,7 +2,7 @@ function FourIslandsCard() {
   const islands = [
     {
       name: 'Poda Island',
-      image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/340726_0.jpg',
+      image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/1765649099678.jpg',
       links: {
         facebook: 'https://www.facebook.com/share/r/1H278RodX6/',
         youtube: 'https://youtube.com/shorts/mIDeJtAXmJM?feature=shared'
@@ -10,7 +10,7 @@ function FourIslandsCard() {
     },
     {
       name: 'Chicken Island',
-      image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/340726_0.jpg',
+      image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/1765649028671.jpg',
       links: {
         facebook: 'https://www.facebook.com/share/r/1H278RodX6/',
         youtube: 'https://youtube.com/shorts/mIDeJtAXmJM?feature=shared'
@@ -26,7 +26,7 @@ function FourIslandsCard() {
     },
     {
       name: 'Phra Nang',
-      image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/340726_0.jpg',
+      image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/1765649053579.jpg',
       links: {
         facebook: 'https://www.facebook.com/share/r/1H278RodX6/',
         youtube: 'https://youtube.com/shorts/mIDeJtAXmJM?feature=shared'
@@ -71,7 +71,7 @@ function FourIslandsCard() {
                   className="h-24 w-full object-cover"
                 />
               </div>
-              <div className="mt-2 flex items-center gap-2 text-[12px] font-medium text-slate-700">
+              <div className="mt-2 flex items-center gap-2 text-[10px] font-medium text-slate-700">
                 <span className="truncate">{island.name}</span>
                 <div className="ml-auto flex items-center gap-1.5">
                   <a
