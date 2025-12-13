@@ -79,7 +79,7 @@
 
 .krabi-info-card {
   position: absolute;
-  bottom: 12%;
+  bottom: 30%;
   left: 14px;
   right: auto;
   width: min(320px, 26vw);
@@ -320,7 +320,7 @@
 
 @media (max-width: 480px) {
   .krabi-info-card {
-    bottom: 52px;
+    bottom: 280px;
     width: 88vw;
     font-size: 12px;
   }
