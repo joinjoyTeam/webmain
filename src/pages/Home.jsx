@@ -47,9 +47,57 @@ const boats = [
     description: 'Half Day 4 Islands Join Trip  \n Talay Waek, Poda, Chicken, \n Phanang Cave ',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/340726_0.jpg',
     link: 'https://joinjoytravel.com/en/trips/24',
-    tags:['']
+    tags:[],
+    buttonLabel: "Book Now"
+    
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
   },
+  {
+    name: 'KRABI SEA TOUR',//KRABI SEA TOUR (Warisa Boat)
+    type: '4 Islands ',//Longtail Boat  
+    capacity: 12,
+    showCapacity: false,   // ✅ แสดงที่นั่ง
+    price: 500,
+    rating: 4.9,
+    showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
+    description: 'Half Day 4 Islands Join Trip  \n Talay Waek, Poda, Chicken, \n Phanang Cave ',
+    image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/340726_0.jpg',
+    link: 'https://joinjoytravel.com/en/trips/24',
+    tags:[],
+    buttonLabel: "Check Available"
+    //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
+  },
+  {
+    name: 'KRABI SEA TOUR',//KRABI SEA TOUR (Warisa Boat)
+    type: '4 Islands ',//Longtail Boat  
+    capacity: 12,
+    showCapacity: false,   // ✅ แสดงที่นั่ง
+    price: 500,
+    rating: 4.9,
+    showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
+    description: 'Half Day 4 Islands Join Trip  \n Talay Waek, Poda, Chicken, \n Phanang Cave ',
+    image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/340726_0.jpg',
+    link: 'https://joinjoytravel.com/en/trips/24',
+    tags:[],
+    buttonLabel: "Check Available"
+    //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
+  },
+  {
+    name: 'KRABI SEA TOUR',//KRABI SEA TOUR (Warisa Boat)
+    type: '4 Islands ',//Longtail Boat  
+    capacity: 12,
+    showCapacity: false,   // ✅ แสดงที่นั่ง
+    price: 500,
+    rating: 4.9,
+    showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
+    description: 'Half Day 4 Islands Join Trip  \n Talay Waek, Poda, Chicken, \n Phanang Cave ',
+    image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/340726_0.jpg',
+    link: 'https://joinjoytravel.com/en/trips/24',
+    tags:[],
+    buttonLabel: "Check Available"
+    //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
+  },
+  
   // {
   //   name: 'Silver Tide 36',
   //   type: 'Sport cruiser',

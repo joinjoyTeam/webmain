@@ -113,11 +113,13 @@ function BoatCard({ boat }) {
           ))}
         </div>
 
-        <button 
-        onClick={() => window.location.href = boat.link} // 👉 ดึงจากข้อมูลเรือ
-        className="w-full rounded-xl bg-[#1877F2] px-4 py-2 text-sm font-semibold text-white shadow-md shadow-[#1877F2]/30 transition hover:scale-[1.01]">
-          View boat details
-        </button>
+        <button
+  onClick={() => window.location.href = boat.link}
+  className="w-full rounded-xl bg-[#1877F2] px-4 py-2 text-sm font-semibold text-white shadow-md shadow-[#1877F2]/30 transition hover:scale-[1.01]"
+>
+  {boat.buttonLabel || "Book Now"}
+</button>
+
       </div>
     </article>
   );
