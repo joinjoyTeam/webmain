@@ -104,6 +104,9 @@ function FourIslandsCard() {
                   </a>
                 </div>
               </div>
+              {index < islands.length - 1 && (
+                <div className="h-[1px] w-8 rounded-full bg-slate-200" aria-hidden="true" />
+              )}
             </div>
           ))}
         </div>
