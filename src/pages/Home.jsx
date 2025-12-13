@@ -4,12 +4,12 @@ import Footer from '../components/Footer.jsx';
 import Map from '../components/Map.jsx';
 import '../components/Map.css';
 
-const heroHighlights = [
-  { title: 'You pick the boat, not the counter', subtitle: 'NO MORE RANDOM BOATS' },
-  { title: 'Compare long-tail boats in one place', subtitle: 'ALL BOATS, ONE MAP' },
-  { title: 'Built for real feedback, not fake stars', subtitle: 'HONEST REVIEWS ONLY' },
-  { title: 'Same pier price or better, always', subtitle: 'LOCAL PRICE, NO MARKUP' }
-];
+// const heroHighlights = [
+//   { title: 'You pick the boat, not the counter', subtitle: 'NO MORE RANDOM BOATS' },
+//   { title: 'Compare long-tail boats in one place', subtitle: 'ALL BOATS, ONE MAP' },
+//   { title: 'Built for real feedback, not fake stars', subtitle: 'HONEST REVIEWS ONLY' },
+//   { title: 'Same pier price or better, always', subtitle: 'LOCAL PRICE, NO MARKUP' }
+// ];
 
 const experiences = [
   {
@@ -87,7 +87,7 @@ function Hero() {
         className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_10%_20%,rgba(24,119,242,0.1),transparent_32%),radial-gradient(circle_at_80%_0%,rgba(66,183,42,0.12),transparent_36%)]"
         aria-hidden
       />
-      <div className="section-shell relative grid gap-5 lg:grid-cols-2 lg:items-center h-full">
+      <div className="section-shell relative grid gap-0 lg:grid-cols-2 lg:items-center h-full">
         <div className="space-y-8">
           <span className="inline-flex items-center rounded-full bg-[#e8f2ff] px-4 py-2 text-sm font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/20">
             JoinJoy Travel • Krabi Local Buddy
@@ -144,12 +144,12 @@ function Hero() {
             </button>
           </div>
           <div className="grid max-w-lg grid-cols-2 gap-4 sm:gap-6">
-            {heroHighlights.map((item) => (
+            {/* {heroHighlights.map((item) => (
               <div key={item.title} className="card-surface space-y-1 p-4">
                 <p className="text-xs font-semibold uppercase tracking-wide text-[#1877F2]">{item.subtitle}</p>
                 <p className="text-lg font-semibold text-slate-900">{item.title}</p>
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
         <div  id="highlights" className="relative h-full lg:min-h-[420px] flex items-stretch" style={{ width: '100%' }}>
