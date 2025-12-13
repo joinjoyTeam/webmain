@@ -5,6 +5,7 @@ import Map from '../components/Map.jsx';
 import '../components/Map.css';
 import FourIslandsCard from '../components/FourIslandsCard.jsx';
 
+
 // const heroHighlights = [
 //   { title: 'You pick the boat, not the counter', subtitle: 'NO MORE RANDOM BOATS' },
 //   { title: 'Compare long-tail boats in one place', subtitle: 'ALL BOATS, ONE MAP' },
@@ -143,8 +144,50 @@ const boats = [
   //   tags: ['Hybrid-electric', 'Shallow beach stops', 'Local guide']
   // }
 ];
+import { useState } from 'react';
 
 function Hero() {
+  const [showTransport, setShowTransport] = useState(false);
+  const [transportStep, setTransportStep] = useState('main');
+  const scooters = [
+  {
+    name: 'Honda Click 125cc',
+    price: 250,
+    note: 'Easy ride, city use'
+  },
+  {
+    name: 'Yamaha NMAX 155cc',
+    price: 350,
+    note: 'Comfortable & powerful'
+  },
+  {
+    name: 'Honda PCX 160cc',
+    price: 400,
+    note: 'Premium, long ride'
+  }
+];
+
+
+const vans = [
+  {
+    name: 'Private Van (City)',
+    price: 1800,
+    note: 'Krabi town / Ao Nang area'
+  },
+  {
+    name: 'Airport transfer',
+    price: 2500,
+    note: 'Hotel ↔ Krabi Airport'
+  },
+  {
+    name: 'Full-day private van',
+    price: 4500,
+    note: '8 hours with driver'
+  }
+];
+
+
+
   return (
     <section className="relative overflow-visible lg:overflow-hidden bg-white pt-4 pb-2 sm:pt-6 sm:pb-4 lg:pt-8 lg:pb-6 min-h-[60vh] lg:min-h-[70vh]">
 
@@ -153,7 +196,7 @@ function Hero() {
         aria-hidden
       />
       <div className="section-shell relative grid gap-0 lg:grid-cols-2 lg:items-center h-full">
-        <div className="space-y-8">
+        <div className="space-y-5">
           <span className="inline-flex items-center rounded-full bg-[#e8f2ff] px-4 py-2 text-sm font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/20">
             JoinJoy Travel • Krabi Local Buddy
           </span>
@@ -163,52 +206,69 @@ function Hero() {
           <p className="text-lg text-slate-700 sm:max-w-xl">
             Get real-time tips, honest recommendations, and curated spots for the best day in Krabi.
           </p>
-          <div className="flex gap-3 w-full justify-center sm:justify-start">
+          
 
 
-       
-            <button
-            onClick={() => {
-              // มือถือเท่านั้น
-            //  if (window.innerWidth < 768) {
-                const el = document.getElementById('Seeallboats');
+          <div className="flex w-full justify-center sm:justify-start gap-6">
+  {/* Explore by Boat */}
+  <div className="flex flex-col items-center sm:items-start gap-1">
+    <button
+  onClick={() => {
+    const el = document.getElementById('Seeallboats');
+    if (el) {
+      const rect = el.getBoundingClientRect();
+      const offset = 10;
+      window.scrollTo({
+        top: window.scrollY + rect.top - offset,
+        behavior: 'smooth'
+      });
+    }
+  }}
+  className="inline-flex items-center justify-center gap-2 min-h-[56px] rounded-xl bg-[#1877F2] px-4 py-2 text-sm font-semibold text-white shadow-md shadow-[#1877F2]/30 transition hover:scale-[1.01]"
+>
+  <span className="leading-tight text-center">
+    <span className="block">Explore by</span>
+    <span className="block">Boat</span>
+  </span>
 
-                if (el) {
-                  const rect = el.getBoundingClientRect();
-                 const offset = 10; // ปรับตามขนาด header ของคุณ
+  <span aria-hidden="true" className="text-base">→</span>
+</button>
 
-                  window.scrollTo({
-                    top: window.scrollY + rect.top - offset,
-                    behavior: 'smooth'
-                  });
-                }
-            //  }
-            }}
-            className="inline-flex items-center gap-2 rounded-xl bg-[#1877F2] px-3 py-1.5 text-sm font-semibold text-white shadow-md shadow-[#1877F2]/30 transition hover:scale-[1.01]">
-              See all boats
-              <span aria-hidden="true" className="text-base">→</span>
-            </button>
-            <button 
-             onClick={() => {
-              // มือถือเท่านั้น
-            //  if (window.innerWidth < 768) {
-                const el = document.getElementById('highlights');
+    <p className="text-xs text-slate-500 leading-snug text-center sm:text-left">
+  Island routes curated<br />
+  <span className="opacity-80">
+    by real locals</span>
+</p>
+  </div>
 
-                if (el) {
-                  const rect = el.getBoundingClientRect();
-                  const offset = 120; // ปรับตามขนาด header ของคุณ
-                  const extraScroll = 120;
-                  window.scrollTo({
-                    top: window.scrollY + rect.top - offset + extraScroll,
-                    behavior: 'smooth'
-                  });
-                }
-             // }
-            }}
-          className="inline-flex items-center gap-2 rounded-xl bg-white px-3 py-1.5 text-sm font-semibold text-[#1877F2] shadow-md shadow-[#1877F2]/30 transition hover:bg-[#f0f6ff]">
-              Explore like a local
-            </button>
-          </div>
+  {/* Get Around Krabi */}
+  <div className="flex flex-col items-center sm:items-start gap-1">
+  <button
+  onClick={() => setShowTransport(true)}
+  className="inline-flex items-center justify-center gap-2 min-h-[56px] rounded-xl bg-white px-4 py-2 text-sm font-semibold text-[#1877F2] shadow-md shadow-[#1877F2]/30 transition hover:bg-[#f0f6ff]"
+>
+  <span className="leading-tight text-center">
+    <span className="block">Get Around</span>
+    <span className="block">Krabi</span>
+  </span>
+  <span aria-hidden className="text-base">→</span>
+</button>
+
+
+
+
+    <p className="text-xs text-slate-500 leading-snug text-center sm:text-left">
+      Scooters, private vans
+       <br />
+  <span className="opacity-80">&amp; airport transfers</span>
+</p>
+  </div>
+</div>
+
+
+
+
+
           <div className="grid max-w-lg grid-cols-2 gap-4 sm:gap-6">
             {/* {heroHighlights.map((item) => (
               <div key={item.title} className="card-surface space-y-1 p-4">
@@ -222,6 +282,196 @@ function Hero() {
           <Map />
         </div>
       </div>
+    
+
+
+
+
+
+{showTransport && (
+  <div className="fixed inset-0 z-[100] bg-black/40 flex items-end sm:items-center justify-center">
+    <div className="w-full sm:max-w-md bg-white rounded-t-2xl sm:rounded-2xl p-6 space-y-4 animate-slideUp">
+
+      {/* HEADER */}
+      <div className="flex items-center justify-between">
+        <h3 className="text-lg font-bold text-slate-900">
+  {transportStep === 'main' && 'Get Around Krabi'}
+  {transportStep === 'scooter' && 'Scooter rental'}
+  {transportStep === 'van' && 'Private van'}
+</h3>
+        <button
+          onClick={() => {
+            setShowTransport(false);
+            setTransportStep('main');
+          }}
+          className="text-slate-400 hover:text-slate-600 text-xl"
+        >
+          ×
+        </button>
+      </div>
+
+      {/* ===== MAIN STEP ===== */}
+      {transportStep === 'main' && (
+        <>
+          {/* Scooter */}
+          <button
+            onClick={() => setTransportStep('scooter')}
+            className="w-full rounded-xl border border-slate-200 p-4 text-left hover:border-[#1877F2] hover:bg-[#f5faff] transition"
+          >
+            <div className="flex items-start gap-3">
+              <span className="text-xl">🛵</span>
+              <div>
+                <p className="font-semibold text-slate-900">
+                  Scooter rental
+                </p>
+                <p className="text-sm text-slate-500">
+                  Daily & weekly rentals, local price
+                </p>
+              </div>
+            </div>
+          </button>
+
+          {/* Van */}
+          <button
+  onClick={() => setTransportStep('van')}
+  className="w-full rounded-xl border border-slate-200 p-4 text-left hover:border-[#1877F2] hover:bg-[#f5faff] transition"
+>
+  <div className="flex items-start gap-3">
+    <span className="text-xl">🚐</span>
+    <div>
+      <p className="font-semibold text-slate-900">
+        Private van & airport transfer
+      </p>
+      <p className="text-sm text-slate-500">
+        Hotel pickup, airport & custom routes
+      </p>
+    </div>
+  </div>
+</button>
+
+          <p className="text-center text-xs text-slate-400 pt-2">
+            Local partners • Transparent pricing
+          </p>
+        </>
+      )}
+
+      {/* ===== SCOOTER STEP ===== */}
+      {transportStep === 'scooter' && (
+        <div className="space-y-4">
+
+          {/* Back */}
+          <button
+            onClick={() => setTransportStep('main')}
+            className="text-[#1877F2] text-sm"
+          >
+            ← Back
+          </button>
+
+          {/* Price list */}
+          <div className="space-y-3">
+            {scooters.map((bike) => (
+              <div
+                key={bike.name}
+                className="rounded-xl border border-slate-200 p-4 flex items-center justify-between"
+              >
+                <div>
+                  <p className="font-semibold text-slate-900">
+                    {bike.name}
+                  </p>
+                  <p className="text-sm text-slate-500">
+                    {bike.note}
+                  </p>
+                </div>
+
+                <div className="text-right">
+                  <p className="text-lg font-bold text-[#1877F2]">
+                    ฿{bike.price}
+                  </p>
+                  <p className="text-xs text-slate-400">
+                    per day
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <a
+            href="https://wa.me/66624290062?text=Hi%20JoinJoy,%20I%20want%20to%20rent%20a%20scooter"
+            target="_blank"
+            className="block w-full text-center rounded-xl bg-[#1877F2] text-white py-3 font-semibold shadow-md shadow-[#1877F2]/30"
+          >
+            Contact via WhatsApp
+          </a>
+
+          <p className="text-center text-xs text-slate-400">
+            Helmet included • Local partner • Fair price
+          </p>
+        </div>
+      )}
+
+
+      {transportStep === 'van' && (
+  <div className="space-y-4">
+
+    {/* Back */}
+    <button
+      onClick={() => setTransportStep('main')}
+      className="text-[#1877F2] text-sm"
+    >
+      ← Back
+    </button>
+
+    {/* Van price list */}
+    <div className="space-y-3">
+      {vans.map((van) => (
+        <div
+          key={van.name}
+          className="rounded-xl border border-slate-200 p-4 flex items-center justify-between"
+        >
+          <div>
+            <p className="font-semibold text-slate-900">
+              {van.name}
+            </p>
+            <p className="text-sm text-slate-500">
+              {van.note}
+            </p>
+          </div>
+
+          <div className="text-right">
+            <p className="text-lg font-bold text-[#1877F2]">
+              ฿{van.price}
+            </p>
+            <p className="text-xs text-slate-400">
+              per trip
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* CTA */}
+    <a
+      href="https://wa.me/66624290062?text=Hi%20JoinJoy,%20I%20want%20to%20book%20a%20private%20van"
+      target="_blank"
+      className="block w-full text-center rounded-xl bg-[#1877F2] text-white py-3 font-semibold shadow-md shadow-[#1877F2]/30"
+    >
+      Book via WhatsApp
+    </a>
+
+    <p className="text-center text-xs text-slate-400">
+      Professional driver • Fuel included • Local service
+    </p>
+  </div>
+)}
+
+
+    </div>
+  </div>
+)}
+
+
+
+
     </section>
   );
 }
