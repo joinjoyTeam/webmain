@@ -78,8 +78,7 @@ function FourIslandsCard() {
                     href={island.links.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white text-[0]
-                      ring-1 ring-slate-200 transition hover:ring-slate-300"
+                    className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white text-[0] ring-1 ring-slate-200 transition hover:ring-slate-300"
                     aria-label={`${island.name} on Facebook`}
                   >
                     <img
@@ -92,8 +91,7 @@ function FourIslandsCard() {
                     href={island.links.youtube}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white text-[0]
-                      ring-1 ring-slate-200 transition hover:ring-slate-300"
+                    className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white text-[0] ring-1 ring-slate-200 transition hover:ring-slate-300"
                     aria-label={`${island.name} on YouTube`}
                   >
                     <img
