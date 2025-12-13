@@ -98,7 +98,8 @@ function Hero() {
           <p className="text-lg text-slate-700 sm:max-w-xl">
             Get real-time tips, honest recommendations, and curated spots for the best day in Krabi.
           </p>
-          <div className="flex gap-3 w-full">
+          <div className="flex gap-3 w-full justify-center sm:justify-start">
+
 
        
             <button
@@ -118,9 +119,9 @@ function Hero() {
                 }
             //  }
             }}
-            className="inline-flex items-center gap-2 rounded-xl bg-[#1877F2] px-5 py-3 text-base font-semibold text-white shadow-md shadow-[#1877F2]/30 transition hover:scale-[1.01]">
+            className="inline-flex items-center gap-2 rounded-xl bg-[#1877F2] px-3 py-1.5 text-sm font-semibold text-white shadow-md shadow-[#1877F2]/30 transition hover:scale-[1.01]">
               See all boats
-              <span aria-hidden className="text-xl">→</span>
+              <span aria-hidden="true" className="text-base">→</span>
             </button>
             <button 
              onClick={() => {
@@ -139,7 +140,7 @@ function Hero() {
                 }
              // }
             }}
-            className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-base font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/30 transition hover:bg-[#f0f6ff]">
+          className="inline-flex items-center gap-2 rounded-xl bg-white px-3 py-1.5 text-sm font-semibold text-[#1877F2] shadow-md shadow-[#1877F2]/30 transition hover:bg-[#f0f6ff]">
               Explore like a local
             </button>
           </div>
@@ -168,7 +169,7 @@ function ExperienceGrid() {
 >
       <div className="section-shell space-y-10">
         <div className="space-y-3 text-center">
-          <span className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/20 shadow-sm">
+          <span className="inline-flex items-center rounded-full bg-white px-4 py-2 text-base font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/20 shadow-sm">
             Handpicked experiences
           </span>
           <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">Pick your style and enjoy Krabi with JoinJoy</h2>
