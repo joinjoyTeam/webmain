@@ -38,61 +38,77 @@ const experiences = [
 const boats = [
   {
     name: 'KRABI SEA TOUR',//KRABI SEA TOUR (Warisa Boat)
-    type: '4 Islands ',//Longtail Boat  
+    type: 'Join Trip Longtail Boat',//Longtail Boat  
     capacity: 12,
     showCapacity: false,   // ✅ แสดงที่นั่ง
     price: 500,
     rating: 4.9,
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
-    description: 'Half Day 4 Islands Join Trip  \n Talay Waek, Poda, Chicken, \n Phanang Cave ',
-    image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/340726_0.jpg',
+    description: 'Join a group trip on a traditional longtail boat at an affordable price.',
+    image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/KRABISEATOUR.jpg',
     link: 'https://joinjoytravel.com/en/trips/24',
     tags:[],
     buttonLabel: "Book Now"
     
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
+    //Half Day 4 Islands Join Trip  \n Talay Waek, Poda, Chicken, \n Phanang Cave 
   },
   {
-    name: 'KRABI SEA TOUR',//KRABI SEA TOUR (Warisa Boat)
-    type: '4 Islands ',//Longtail Boat  
+    name: 'Peace Travel',//KRABI SEA TOUR (Warisa Boat)
+    type: 'Private Longtail Boat',//Longtail Boat  
     capacity: 12,
     showCapacity: false,   // ✅ แสดงที่นั่ง
     price: 500,
     rating: 4.9,
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
-    description: 'Half Day 4 Islands Join Trip  \n Talay Waek, Poda, Chicken, \n Phanang Cave ',
+    description: 'Private longtail boat, affordable and relaxing.',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/340726_0.jpg',
-    link: 'https://joinjoytravel.com/en/trips/24',
+    link: 'https://wa.me/66624290062',
     tags:[],
     buttonLabel: "Check Available"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
   },
   {
-    name: 'KRABI SEA TOUR',//KRABI SEA TOUR (Warisa Boat)
-    type: '4 Islands ',//Longtail Boat  
+    name: 'Aonang Tour and Travel',//KRABI SEA TOUR (Warisa Boat)
+    type: 'Private Luxury Longtail Boat',//Longtail Boat  
     capacity: 12,
     showCapacity: false,   // ✅ แสดงที่นั่ง
     price: 500,
     rating: 4.9,
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
-    description: 'Half Day 4 Islands Join Trip  \n Talay Waek, Poda, Chicken, \n Phanang Cave ',
+    description: 'Private longtail boat with premium comfort, beautiful views, and great photo spots.',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/340726_0.jpg',
-    link: 'https://joinjoytravel.com/en/trips/24',
+    link: 'https://wa.me/66624290062',
     tags:[],
     buttonLabel: "Check Available"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
   },
   {
-    name: 'KRABI SEA TOUR',//KRABI SEA TOUR (Warisa Boat)
-    type: '4 Islands ',//Longtail Boat  
+    name: 'Beyond Krabi Tours',//KRABI SEA TOUR (Warisa Boat)
+    type: 'Join Trip Speed Boat',//Longtail Boat  
     capacity: 12,
     showCapacity: false,   // ✅ แสดงที่นั่ง
     price: 500,
     rating: 4.9,
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
-    description: 'Half Day 4 Islands Join Trip  \n Talay Waek, Poda, Chicken, \n Phanang Cave ',
+    description: 'Join a speed boat tour to visit Krabi’s top spots quickly and easily.',
+    image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/BeyondKrabiTours.png.png',
+    link: 'https://wa.me/66624290062',
+    tags:[],
+    buttonLabel: "Check Available"
+    //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
+  },
+  {
+    name: 'Wonderful Tour Krabi',//KRABI SEA TOUR (Warisa Boat)
+    type: 'Private Trip Speed Boat',//Longtail Boat  
+    capacity: 12,
+    showCapacity: false,   // ✅ แสดงที่นั่ง
+    price: 500,
+    rating: 4.9,
+    showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
+    description: 'High-end private speed boat with comfort, privacy, and stunning photo spots.',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/340726_0.jpg',
-    link: 'https://joinjoytravel.com/en/trips/24',
+    link: 'https://wa.me/66624290062',
     tags:[],
     buttonLabel: "Check Available"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
@@ -241,12 +257,15 @@ function FleetSection() {
       <div  id="Seeallboats" className="section-shell space-y-12">
         <div className="space-y-3 text-center">
           <span className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/20 shadow-sm">
-            Signature fleet
+            A signature fleet of Longtail Boats
           </span>
-          <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">Choose the boat you love and head out to sea</h2>
-          <p className="text-lg text-slate-700 sm:mx-auto sm:max-w-2xl">
-            Each boat is inspected, professionally crewed, transparently priced, and can flex to your trip style.
-          </p>
+          <h3 className="text-2xl font-extrabold text-slate-900 sm:text-3xl">Choose your boat styles <br />
+          And head out to 4 Islands Trip</h3>
+          <p className="text-lg leading-snug text-slate-700 sm:mx-auto sm:max-w-2xl mb-1">
+            Each boat is inspected, professionally crewed, transparently priced
+           <br />
+            And can flex to your trip style.
+            </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {boats.map((boat) => (
