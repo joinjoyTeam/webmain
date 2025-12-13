@@ -81,7 +81,7 @@ const boats = [
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white pt-4 pb-0 lg:pt-6 lg:pb-2">
+   <section className="relative overflow-hidden bg-white pt-3 pb-0  lg:pt-6 lg:pb-2">
 
       <div
         className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_10%_20%,rgba(24,119,242,0.1),transparent_32%),radial-gradient(circle_at_80%_0%,rgba(66,183,42,0.12),transparent_36%)]"
@@ -213,7 +213,7 @@ function Home() {
   return (
     <main>
       <Hero />
-      <ExperienceGrid />
+      {/* <ExperienceGrid /> */}
       <FleetSection />
       <Footer />
     </main>

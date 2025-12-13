@@ -47,7 +47,11 @@ export const LOCATIONS = [
     score: 100,
     coordinates: [7.960749334245738, 98.81188600481],
     highlightTag: 'Sandbar',
-    shortDescription: 'Thap Island is connected with Mor Island and make the sand bank when the water is lowtide which we called Separated Sea.'
+    shortDescription: 'Thap Island is connected with Mor Island and make the sand bank when the water is lowtide which we called Separated Sea.',
+    facebook: 'https://www.facebook.com/share/r/1H278RodX6/',
+    tiktok: 'https://vt.tiktok.com/ZSPBXPGWL/',
+    intagram: 'https://www.instagram.com/reel/DP7u2ffjxAO/?igsh=M3R3a2V4OGFra3Jk',
+    youtube: 'https://youtube.com/shorts/mIDeJtAXmJM?feature=shared'
   },
  {
     id: 'Hong-Island-view',
@@ -125,6 +129,10 @@ export const LOCATIONS = [
     coordinates: [7.9609338,98.8108289],
     highlightTag: 'Sandbar',
     shortDescription: 'Famous sandbar that appears at low tide.',
+    facebook: 'https://www.facebook.com/share/r/1H278RodX6/',
+    tiktok: 'https://vt.tiktok.com/ZSPBXPGWL/',
+    intagram: 'https://www.instagram.com/reel/DP7u2ffjxAO/?igsh=M3R3a2V4OGFra3Jk',
+    youtube: 'https://youtube.com/shorts/mIDeJtAXmJM?feature=shared'
   },
   {
     id: 'Hong-Island',
