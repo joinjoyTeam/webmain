@@ -287,7 +287,7 @@ function Map() {
 
 
   return (
-    <section className="map-section">
+    <section className="map-section h-full flex-1">
       {/* <div className="krabi-map-topbar">
         <span className="krabi-map-badge">JOINJOY PREMIUM ROUTES</span>
         <h3 className="krabi-map-title">Krabi Highlights</h3>

@@ -79,7 +79,7 @@
 
 .krabi-info-card {
   position: absolute;
-  bottom: 14px;
+  bottom: 12%;
   left: 14px;
   right: auto;
   width: min(320px, 26vw);
