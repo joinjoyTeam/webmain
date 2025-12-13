@@ -59,7 +59,7 @@ function FourIslandsCard() {
         </div>
 
         <div className="mt-3 grid grid-cols-2 gap-3">
-          {islands.map((island) => (
+          {islands.map((island, index) => (
             <div
               key={island.name}
               className="rounded-xl border border-slate-200 bg-white/90 p-2 shadow-sm"
@@ -102,9 +102,6 @@ function FourIslandsCard() {
                   </a>
                 </div>
               </div>
-              {index < islands.length - 1 && (
-                <div className="h-[1px] w-8 rounded-full bg-slate-200" aria-hidden="true" />
-              )}
             </div>
           ))}
         </div>
