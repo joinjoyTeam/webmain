@@ -4,6 +4,7 @@ import Footer from '../components/Footer.jsx';
 import Map from '../components/Map.jsx';
 import '../components/Map.css';
 import FourIslandsCard from '../components/FourIslandsCard.jsx';
+import { useState } from 'react';
 
 
 // const heroHighlights = [
@@ -144,12 +145,8 @@ const boats = [
   //   tags: ['Hybrid-electric', 'Shallow beach stops', 'Local guide']
   // }
 ];
-import { useState } from 'react';
 
-function Hero() {
-  const [showTransport, setShowTransport] = useState(false);
-  const [transportStep, setTransportStep] = useState('main');
-  const scooters = [
+const scooters = [
   {
     name: 'Honda Click 125cc',
     price: 250,
@@ -166,7 +163,6 @@ function Hero() {
     note: 'Premium, long ride'
   }
 ];
-
 
 const vans = [
   {
@@ -187,6 +183,7 @@ const vans = [
 ];
 
 
+function Hero({ onOpenTransport }) {
 
   return (
     <section className="relative overflow-visible lg:overflow-hidden bg-white pt-4 pb-2 sm:pt-6 sm:pb-4 lg:pt-8 lg:pb-6 min-h-[60vh] lg:min-h-[70vh]">
@@ -244,7 +241,7 @@ const vans = [
   {/* Get Around Krabi */}
   <div className="flex flex-col items-center sm:items-start gap-1">
   <button
-  onClick={() => setShowTransport(true)}
+  onClick={onOpenTransport}
   className="inline-flex items-center justify-center gap-2 min-h-[56px] rounded-xl bg-white px-4 py-2 text-sm font-semibold text-[#1877F2] shadow-md shadow-[#1877F2]/30 transition hover:bg-[#f0f6ff]"
 >
   <span className="leading-tight text-center">
@@ -282,196 +279,6 @@ const vans = [
           <Map />
         </div>
       </div>
-    
-
-
-
-
-
-{showTransport && (
-  <div className="fixed inset-0 z-[100] bg-black/40 flex items-end sm:items-center justify-center">
-    <div className="w-full sm:max-w-md bg-white rounded-t-2xl sm:rounded-2xl p-6 space-y-4 animate-slideUp">
-
-      {/* HEADER */}
-      <div className="flex items-center justify-between">
-        <h3 className="text-lg font-bold text-slate-900">
-  {transportStep === 'main' && 'Get Around Krabi'}
-  {transportStep === 'scooter' && 'Scooter rental'}
-  {transportStep === 'van' && 'Private van'}
-</h3>
-        <button
-          onClick={() => {
-            setShowTransport(false);
-            setTransportStep('main');
-          }}
-          className="text-slate-400 hover:text-slate-600 text-xl"
-        >
-          ×
-        </button>
-      </div>
-
-      {/* ===== MAIN STEP ===== */}
-      {transportStep === 'main' && (
-        <>
-          {/* Scooter */}
-          <button
-            onClick={() => setTransportStep('scooter')}
-            className="w-full rounded-xl border border-slate-200 p-4 text-left hover:border-[#1877F2] hover:bg-[#f5faff] transition"
-          >
-            <div className="flex items-start gap-3">
-              <span className="text-xl">🛵</span>
-              <div>
-                <p className="font-semibold text-slate-900">
-                  Scooter rental
-                </p>
-                <p className="text-sm text-slate-500">
-                  Daily & weekly rentals, local price
-                </p>
-              </div>
-            </div>
-          </button>
-
-          {/* Van */}
-          <button
-  onClick={() => setTransportStep('van')}
-  className="w-full rounded-xl border border-slate-200 p-4 text-left hover:border-[#1877F2] hover:bg-[#f5faff] transition"
->
-  <div className="flex items-start gap-3">
-    <span className="text-xl">🚐</span>
-    <div>
-      <p className="font-semibold text-slate-900">
-        Private van & airport transfer
-      </p>
-      <p className="text-sm text-slate-500">
-        Hotel pickup, airport & custom routes
-      </p>
-    </div>
-  </div>
-</button>
-
-          <p className="text-center text-xs text-slate-400 pt-2">
-            Local partners • Transparent pricing
-          </p>
-        </>
-      )}
-
-      {/* ===== SCOOTER STEP ===== */}
-      {transportStep === 'scooter' && (
-        <div className="space-y-4">
-
-          {/* Back */}
-          <button
-            onClick={() => setTransportStep('main')}
-            className="text-[#1877F2] text-sm"
-          >
-            ← Back
-          </button>
-
-          {/* Price list */}
-          <div className="space-y-3">
-            {scooters.map((bike) => (
-              <div
-                key={bike.name}
-                className="rounded-xl border border-slate-200 p-4 flex items-center justify-between"
-              >
-                <div>
-                  <p className="font-semibold text-slate-900">
-                    {bike.name}
-                  </p>
-                  <p className="text-sm text-slate-500">
-                    {bike.note}
-                  </p>
-                </div>
-
-                <div className="text-right">
-                  <p className="text-lg font-bold text-[#1877F2]">
-                    ฿{bike.price}
-                  </p>
-                  <p className="text-xs text-slate-400">
-                    per day
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <a
-            href="https://wa.me/66624290062?text=Hi%20JoinJoy,%20I%20want%20to%20rent%20a%20scooter"
-            target="_blank"
-            className="block w-full text-center rounded-xl bg-[#1877F2] text-white py-3 font-semibold shadow-md shadow-[#1877F2]/30"
-          >
-            Contact via WhatsApp
-          </a>
-
-          <p className="text-center text-xs text-slate-400">
-            Helmet included • Local partner • Fair price
-          </p>
-        </div>
-      )}
-
-
-      {transportStep === 'van' && (
-  <div className="space-y-4">
-
-    {/* Back */}
-    <button
-      onClick={() => setTransportStep('main')}
-      className="text-[#1877F2] text-sm"
-    >
-      ← Back
-    </button>
-
-    {/* Van price list */}
-    <div className="space-y-3">
-      {vans.map((van) => (
-        <div
-          key={van.name}
-          className="rounded-xl border border-slate-200 p-4 flex items-center justify-between"
-        >
-          <div>
-            <p className="font-semibold text-slate-900">
-              {van.name}
-            </p>
-            <p className="text-sm text-slate-500">
-              {van.note}
-            </p>
-          </div>
-
-          <div className="text-right">
-            <p className="text-lg font-bold text-[#1877F2]">
-              ฿{van.price}
-            </p>
-            <p className="text-xs text-slate-400">
-              per trip
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    {/* CTA */}
-    <a
-      href="https://wa.me/66624290062?text=Hi%20JoinJoy,%20I%20want%20to%20book%20a%20private%20van"
-      target="_blank"
-      className="block w-full text-center rounded-xl bg-[#1877F2] text-white py-3 font-semibold shadow-md shadow-[#1877F2]/30"
-    >
-      Book via WhatsApp
-    </a>
-
-    <p className="text-center text-xs text-slate-400">
-      Professional driver • Fuel included • Local service
-    </p>
-  </div>
-)}
-
-
-    </div>
-  </div>
-)}
-
-
-
-
     </section>
   );
 }
@@ -529,9 +336,20 @@ function FleetSection() {
 }
 
 function Home() {
+  const [showTransport, setShowTransport] = useState(false);
+  const [transportStep, setTransportStep] = useState('main');
+
+  const closeTransport = () => {
+    setShowTransport(false);
+    setTransportStep('main');
+  };
+
   return (
     <main>
-      <Hero />
+      <Hero onOpenTransport={() => {
+        setTransportStep('main');
+        setShowTransport(true);
+      }} />
       
       {/* 🔹 4 Islands Route Insight */}
       <section className="bg-[#f7f9fb] py-6 sm:py-10">
@@ -545,6 +363,180 @@ function Home() {
 
       <FleetSection />
       <Footer />
+
+      {showTransport && (
+        <div className="fixed inset-0 z-[9999] bg-black/50 flex items-end sm:items-center justify-center">
+          <div className="w-full sm:max-w-md bg-white rounded-t-2xl sm:rounded-2xl p-6 space-y-4 animate-slideUp">
+
+            {/* HEADER */}
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-bold text-slate-900">
+                {transportStep === 'main' && 'Get Around Krabi'}
+                {transportStep === 'scooter' && 'Scooter rental'}
+                {transportStep === 'van' && 'Private van'}
+              </h3>
+              <button
+                onClick={closeTransport}
+                className="text-slate-400 hover:text-slate-600 text-xl"
+              >
+                ×
+              </button>
+            </div>
+
+            {/* ===== MAIN STEP ===== */}
+            {transportStep === 'main' && (
+              <>
+                {/* Scooter */}
+                <button
+                  onClick={() => setTransportStep('scooter')}
+                  className="w-full rounded-xl border border-slate-200 p-4 text-left hover:border-[#1877F2] hover:bg-[#f5faff] transition"
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl">🛵</span>
+                    <div>
+                      <p className="font-semibold text-slate-900">
+                        Scooter rental
+                      </p>
+                      <p className="text-sm text-slate-500">
+                        Daily & weekly rentals, local price
+                      </p>
+                    </div>
+                  </div>
+                </button>
+
+                {/* Van */}
+                <button
+                  onClick={() => setTransportStep('van')}
+                  className="w-full rounded-xl border border-slate-200 p-4 text-left hover:border-[#1877F2] hover:bg-[#f5faff] transition"
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl">🚐</span>
+                    <div>
+                      <p className="font-semibold text-slate-900">
+                        Private van
+                      </p>
+                      <p className="text-sm text-slate-500">
+                        Airport & day trips, friendly drivers
+                      </p>
+                    </div>
+                  </div>
+                </button>
+              </>
+            )}
+
+            {transportStep === 'scooter' && (
+              <div className="space-y-4">
+
+                {/* Back */}
+                <button
+                  onClick={() => setTransportStep('main')}
+                  className="text-[#1877F2] text-sm"
+                >
+                  ← Back
+                </button>
+
+                {/* Scooter price list */}
+                <div className="space-y-3">
+                  {scooters.map((scooter) => (
+                    <div
+                      key={scooter.name}
+                      className="rounded-xl border border-slate-200 p-4 flex items-center justify-between"
+                    >
+                      <div>
+                        <p className="font-semibold text-slate-900">
+                          {scooter.name}
+                        </p>
+                        <p className="text-sm text-slate-500">
+                          {scooter.note}
+                        </p>
+                      </div>
+
+                      <div className="text-right">
+                        <p className="text-lg font-bold text-[#1877F2]">
+                          ฿{scooter.price}
+                        </p>
+                        <p className="text-xs text-slate-400">
+                          / day
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA */}
+                <a
+                  href="https://wa.me/66624290062?text=Hi%20JoinJoy,%20I%20want%20to%20rent%20a%20scooter"
+                  target="_blank"
+                  className="block w-full text-center rounded-xl bg-[#1877F2] text-white py-3 font-semibold shadow-md shadow-[#1877F2]/30"
+                >
+                  Contact via WhatsApp
+                </a>
+
+                <p className="text-center text-xs text-slate-400">
+                  Helmet included • Local partner • Fair price
+                </p>
+              </div>
+            )}
+
+
+            {transportStep === 'van' && (
+              <div className="space-y-4">
+
+                {/* Back */}
+                <button
+                  onClick={() => setTransportStep('main')}
+                  className="text-[#1877F2] text-sm"
+                >
+                  ← Back
+                </button>
+
+                {/* Van price list */}
+                <div className="space-y-3">
+                  {vans.map((van) => (
+                    <div
+                      key={van.name}
+                      className="rounded-xl border border-slate-200 p-4 flex items-center justify-between"
+                    >
+                      <div>
+                        <p className="font-semibold text-slate-900">
+                          {van.name}
+                        </p>
+                        <p className="text-sm text-slate-500">
+                          {van.note}
+                        </p>
+                      </div>
+
+                      <div className="text-right">
+                        <p className="text-lg font-bold text-[#1877F2]">
+                          ฿{van.price}
+                        </p>
+                        <p className="text-xs text-slate-400">
+                          per trip
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA */}
+                <a
+                  href="https://wa.me/66624290062?text=Hi%20JoinJoy,%20I%20want%20to%20book%20a%20private%20van"
+                  target="_blank"
+                  className="block w-full text-center rounded-xl bg-[#1877F2] text-white py-3 font-semibold shadow-md shadow-[#1877F2]/30"
+                >
+                  Book via WhatsApp
+                </a>
+
+                <p className="text-center text-xs text-slate-400">
+                  Professional driver • Fuel included • Local service
+                </p>
+              </div>
+            )}
+
+
+          </div>
+        </div>
+      )}
     </main>
   );
 }
