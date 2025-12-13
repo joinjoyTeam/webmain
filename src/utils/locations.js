@@ -73,7 +73,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Phranang-Cave',
-    name: 'Phranang Cave',
+    name: 'Phranang Cave Beach',
     group: 'Beach',
     tags: [ 'Unseen',  '4 Islands', '7 Islands', 'Sunset', 'Rock climbing', 'Romantic', 'Kayak','Solo','Couple'],
     recommended: false, //'Iconic','Solo', 'Peace', 'Couple', 'Family', 'Friendly'
@@ -81,6 +81,17 @@ export const LOCATIONS = [
     coordinates: [8.00618929910943, 98.83830842932949],
     highlightTag: 'Cliff & Sunset',
     shortDescription: 'One of the best spot in Aonang and so many activities to do, Best for sunset.'
+  },
+   {
+    id: 'Phranang-Cave',
+    name: 'Phranang Cave',
+    group: 'Viewpoint',
+    tags: [ 'Unseen',  '4 Islands', '7 Islands',  'Romantic', 'Kayak','Solo','Couple'],
+    recommended: false, //'Iconic','Solo', 'Peace', 'Couple', 'Family', 'Friendly'
+    score: 94,
+    coordinates: [8.004652849100607, 98.84025614456091],
+    highlightTag: 'Worship for safe journeys',
+    shortDescription: 'Phra Nang Cave is a place where locals and tourists come to worship for safe journeys, and it has a unique symbol.'
   },
   {
     id: 'Poda-Island',
@@ -154,8 +165,7 @@ export const LOCATIONS = [
     name: 'Maya Bay',
     group: 'Beach',
     tags: ['Iconic','Swimming', 'Unseen',  'Sunset'
-      , 'Sea Animal', 'Outstanding', 'Snorkeling','Solo', 'Peace', 'Couple', 'Family', 'Friend'],
-     
+      , 'Sea Animal', 'Outstanding', 'Snorkeling','Solo', 'Peace', 'Couple', 'Family', 'Friend'], 
     recommended: true,
     score: 91,
     coordinates: [7.676756680821906, 98.76556276184752],
@@ -299,12 +309,19 @@ export const LOCATIONS = [
     id: 'Ao-Nang-Beach',
     name: 'Ao Nang Beach',
     group: 'Sunset',
-    tags: ['Sunset', 'Swimming', 'Activities','Solo', 'Peace', 'Couple', 'Family', 'Friend'],
+    tags:'',
+    //tags: ['Sunset', 'Swimming', 'Activities','Solo', 'Peace', 'Couple', 'Family', 'Friend'],
     recommended: false,
     score: 95,  
     coordinates: [8.029270233730031, 98.8240309893113],
     highlightTag: 'Sunset Point',
-    shortDescription: 'So many fun activities to do.'
+    shortDescription: 'So many fun activities to do.',
+    //******************************************** */
+    // facebook: 'https://www.facebook.com/Joinjoytravel',
+    // tiktok: 'https://www.tiktok.com/@joinjoytravel?lang=en',
+    // intagram: 'https://www.instagram.com/joinjoytravel/',
+    // youtube: 'https://www.youtube.com/@joinjoytravel'
+    //googleMapUrl: 'https://www.google.com/maps/search/?api=1&query=8.029270233730031,98.8240309893113',
   },
   {
     id: 'Klong-Muang-Beach',

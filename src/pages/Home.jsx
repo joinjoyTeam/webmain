@@ -37,51 +37,57 @@ const experiences = [
 
 const boats = [
   {
-    name: 'Azure Dawn 42',
-    type: 'Luxury catamaran',
+    name: 'KRABI SEA TOUR',//KRABI SEA TOUR (Warisa Boat)
+    type: '4 Islands ',//Longtail Boat  
     capacity: 12,
-    price: 820,
+    showCapacity: false,   // ✅ แสดงที่นั่ง
+    price: 500,
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
+    showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
+    description: 'Half Day 4 Islands Join Trip  \n Talay Waek, Poda, Chicken, \n Phanang Cave ',
+    image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/340726_0.jpg',
+    link: 'https://joinjoytravel.com/en/trips/24',
+    tags:['']
+    //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
   },
-  {
-    name: 'Silver Tide 36',
-    type: 'Sport cruiser',
-    capacity: 8,
-    price: 560,
-    rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Day trip', 'Snorkel gear', 'Bluetooth music']
-  },
-  {
-    name: 'Mariner 50',
-    type: 'Skydeck yacht',
-    capacity: 16,
-    price: 1040,
-    rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Overnight option', 'Private chef', 'Cabin suites']
-  },
-  {
-    name: 'Coral Whisper 32',
-    type: 'Eco cruiser',
-    capacity: 6,
-    price: 420,
-    rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Hybrid-electric', 'Shallow beach stops', 'Local guide']
-  }
+  // {
+  //   name: 'Silver Tide 36',
+  //   type: 'Sport cruiser',
+  //   capacity: 8,
+  //   price: 560,
+  //   rating: 4.7,
+  //   image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
+  //   tags: ['Day trip', 'Snorkel gear', 'Bluetooth music']
+  // },
+  // {
+  //   name: 'Mariner 50',
+  //   type: 'Skydeck yacht',
+  //   capacity: 16,
+  //   price: 1040,
+  //   rating: 4.8,
+  //   image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
+  //   tags: ['Overnight option', 'Private chef', 'Cabin suites']
+  // },
+  // {
+  //   name: 'Coral Whisper 32',
+  //   type: 'Eco cruiser',
+  //   capacity: 6,
+  //   price: 420,
+  //   rating: 4.6,
+  //   image: 'https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1200&q=80',
+  //   tags: ['Hybrid-electric', 'Shallow beach stops', 'Local guide']
+  // }
 ];
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white pt-8 pb-16 lg:pt-12 lg:pb-24">
+    <section className="relative overflow-hidden bg-white pt-4 pb-0 lg:pt-6 lg:pb-2">
+
       <div
         className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_10%_20%,rgba(24,119,242,0.1),transparent_32%),radial-gradient(circle_at_80%_0%,rgba(66,183,42,0.12),transparent_36%)]"
         aria-hidden
       />
-      <div className="section-shell relative grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div className="section-shell relative grid gap-4 lg:grid-cols-2 lg:items-center">
         <div className="space-y-8">
           <span className="inline-flex items-center rounded-full bg-[#e8f2ff] px-4 py-2 text-sm font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/20">
             JoinJoy Travel • Krabi Local Buddy
@@ -92,7 +98,9 @@ function Hero() {
           <p className="text-lg text-slate-700 sm:max-w-xl">
             Get real-time tips, honest recommendations, and curated spots for the best day in Krabi.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex gap-3 w-full">
+
+       
             <button
             onClick={() => {
               // มือถือเท่านั้น
@@ -101,7 +109,7 @@ function Hero() {
 
                 if (el) {
                   const rect = el.getBoundingClientRect();
-                  const offset = 140; // ปรับตามขนาด header ของคุณ
+                 const offset = 10; // ปรับตามขนาด header ของคุณ
 
                   window.scrollTo({
                     top: window.scrollY + rect.top - offset,
@@ -123,7 +131,7 @@ function Hero() {
                 if (el) {
                   const rect = el.getBoundingClientRect();
                   const offset = 120; // ปรับตามขนาด header ของคุณ
-                  const extraScroll = 40;
+                  const extraScroll = 120;
                   window.scrollTo({
                     top: window.scrollY + rect.top - offset + extraScroll,
                     behavior: 'smooth'
@@ -154,7 +162,10 @@ function Hero() {
 
 function ExperienceGrid() {
   return (
-    <section id="experiences" className="bg-[#f7f9fb] py-16 sm:py-20">
+    <section
+  id="experiences"
+  className="bg-[#f7f9fb] pt-2 pb-4 sm:pt-8 sm:pb-16"
+>
       <div className="section-shell space-y-10">
         <div className="space-y-3 text-center">
           <span className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/20 shadow-sm">
@@ -177,7 +188,7 @@ function ExperienceGrid() {
 
 function FleetSection() {
   return (
-    <section   id="boats" className="py-16 sm:py-20">
+    <section   id="boats" className="pt-2 pb-6 sm:pt-8 sm:pb-16">
       <div  id="Seeallboats" className="section-shell space-y-12">
         <div className="space-y-3 text-center">
           <span className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/20 shadow-sm">

@@ -1,4 +1,7 @@
 function BoatCard({ boat }) {
+  const SHOW_RATING = boat.showRating !== false; // ✅ default = true
+  const SHOW_CAPACITY = boat.showCapacity !== false; // ✅ default = true
+
 
   const renderStars = () => {
     const stars = [];
@@ -37,38 +40,82 @@ function BoatCard({ boat }) {
   return (
     <article className="card-surface h-full overflow-hidden">
       <div className="relative">
-        <img className="h-44 w-full object-cover" src={boat.image} alt={boat.name} loading="lazy" />
+        
+        <img
+           className="
+    h-44 w-full object-cover
+    brightness-110 contrast-105
+    transition-transform duration-200 ease-out
+    hover:scale-105
+    active:scale-95
+  "
+          src={boat.image}
+          alt={boat.name}
+          loading="lazy"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/10" />
         <div className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/20">
           {boat.type}
         </div>
       </div>
+
       <div className="space-y-3 p-6">
         <div className="flex items-start justify-between gap-3">
           <div className="space-y-1">
             <h3 className="text-lg font-bold text-slate-900">{boat.name}</h3>
-            <div
-              className="flex items-center gap-2 text-sm text-slate-700"
-              aria-label={`Rated ${boat.rating.toFixed(1)} out of 5`}
-            >
-              <div className="flex items-center gap-1">{renderStars()}</div>
-              <span className="font-semibold text-slate-900">{boat.rating.toFixed(1)}</span>
-            </div>
-            <p className="text-sm text-slate-600">Fits {boat.capacity} guests</p>
+
+            {/* ✅ Rating ถูกควบคุมด้วย SHOW_RATING */}
+           {SHOW_RATING && (
+              <div
+                className="flex items-center gap-2 text-sm text-slate-700"
+                aria-label={`Rated ${boat.rating.toFixed(1)} out of 5`}
+              >
+                <div className="flex items-center gap-1">{renderStars()}</div>
+                <span className="font-semibold text-slate-900">
+                  {boat.rating.toFixed(1)}
+                </span>
+              </div>
+            )}
+
+
+            {/* ✅ Capacity ถูกควบคุมด้วย SHOW_CAPACITY */}
+            {SHOW_CAPACITY && (
+              <p className="text-sm text-slate-600">
+                Fits {boat.capacity} guests
+              </p>
+            )}
+            {/* ✅ Description เพิ่มเติม */}
+            {boat.description && (
+              <p className="text-sm text-slate-700 leading-relaxed whitespace-pre-line">
+             
+            
+                {boat.description}
+              </p>
+            )}
           </div>
+
           <div className="text-right">
             <p className="text-xs text-slate-500">Starting from</p>
-            <p className="text-xl font-semibold text-[#1877F2]">฿{boat.price}</p>
+            <p className="text-xl font-semibold text-[#1877F2]">
+              ฿{boat.price}
+            </p>
           </div>
         </div>
+
         <div className="flex flex-wrap gap-2">
           {boat.tags.map((tag) => (
-            <span key={tag} className="rounded-full bg-[#f0f6ff] px-3 py-1 text-xs font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/20">
+            <span
+              key={tag}
+              className="rounded-full bg-[#f0f6ff] px-3 py-1 text-xs font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/20"
+            >
               {tag}
             </span>
           ))}
         </div>
-        <button className="w-full rounded-xl bg-[#1877F2] px-4 py-2 text-sm font-semibold text-white shadow-md shadow-[#1877F2]/30 transition hover:scale-[1.01]">
+
+        <button 
+        onClick={() => window.location.href = boat.link} // 👉 ดึงจากข้อมูลเรือ
+        className="w-full rounded-xl bg-[#1877F2] px-4 py-2 text-sm font-semibold text-white shadow-md shadow-[#1877F2]/30 transition hover:scale-[1.01]">
           View boat details
         </button>
       </div>

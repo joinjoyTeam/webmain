@@ -6,12 +6,13 @@ function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const navLinks = [
-    { href: "#boats", label: "Boats" },
-    { href: "#experiences", label: "Experiences" },
-    { href: "#cta", label: "Start booking" },
+    // { href: "#boats", label: "Boats" },
+    // { href: "#experiences", label: "Experiences" },
+    // { href: "#cta", label: "Start booking" },
   ];
 
   const whatsappHref = "https://wa.me/66624290062";
+  const website = "https://joinjoytravel.com/en";
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -48,7 +49,7 @@ function Navbar() {
               JoinJoy
             </p>
             <p className="truncate text-lg font-semibold text-slate-900">
-              Krabi Journeys
+              Journeys 
             </p>
           </div>
         </div>
@@ -75,16 +76,23 @@ function Navbar() {
             WhatsApp
           </a>
 
-          <div className="hidden items-center gap-2 md:flex lg:gap-3">
-            <button className="rounded-xl px-4 py-2 text-sm font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/30 transition hover:bg-[#1877F2]/5">
+          {/* <div className="hidden items-center gap-2 md:flex lg:gap-3">
+            {/* <button className="rounded-xl px-4 py-2 text-sm font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/30 transition hover:bg-[#1877F2]/5">
               Log in
-            </button>
-            <button className="inline-flex rounded-xl bg-[#1877F2] px-4 py-2 text-sm font-semibold text-white shadow-md shadow-[#1877F2]/30 transition hover:scale-[1.01]">
-              Book with us
-            </button>
-          </div>
+            </button> */}
 
-          <button
+            
+             <button 
+              onClick={() => window.location.href = website} 
+             className="inline-flex rounded-xl bg-[#1877F2] px-3 py-2 text-xs font-semibold text-white shadow-md shadow-[#1877F2]/30 transition hover:scale-[1.01]">
+            
+            Book with us
+
+            </button> 
+         {/* </div> 
+          */}
+
+          {/* <button
             type="button"
             className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-[#1877F2]/40 hover:text-[#1877F2] md:hidden"
             aria-expanded={isMenuOpen}
@@ -113,11 +121,11 @@ function Navbar() {
                 />
               )}
             </svg>
-          </button>
+          </button> */}
         </div>
       </div>
 
-      <div
+      {/* <div
         className={`section-shell origin-top transform-gpu transition-all duration-300 ease-in-out md:hidden ${
           isMenuOpen
             ? "max-h-[520px] scale-y-100 opacity-100 pointer-events-auto"
@@ -138,16 +146,20 @@ function Navbar() {
             ))}
           </div>
 
-          <div className="flex flex-col gap-2 border-t border-slate-100 p-4">
-            <button className="inline-flex w-full justify-center rounded-xl px-4 py-2 text-sm font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/25 transition hover:bg-[#1877F2]/5">
+          {/* <div className="flex flex-col gap-2 border-t border-slate-100 p-4">
+            {/* <button className="inline-flex w-full justify-center rounded-xl px-4 py-2 text-sm font-semibold text-[#1877F2] ring-1 ring-[#1877F2]/25 transition hover:bg-[#1877F2]/5">
               Log in
-            </button>
-            <button className="inline-flex w-full justify-center rounded-xl bg-[#1877F2] px-4 py-2 text-sm font-semibold text-white shadow-md shadow-[#1877F2]/30 transition hover:scale-[1.01]">
+            </button> */}
+           {/*  <button className="inline-flex w-full justify-center rounded-xl bg-[#1877F2] px-4 py-2 text-sm font-semibold text-white shadow-md shadow-[#1877F2]/30 transition hover:scale-[1.01]">
               Book with us
-            </button>
-          </div>
-        </div>
-      </div>
+            </button> */}
+          {/*</div> */}
+          
+        {/*</div> */}
+     {/*} </div> 
+      */}
+
+
     </header>
   );
 }
