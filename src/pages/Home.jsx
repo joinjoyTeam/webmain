@@ -81,7 +81,7 @@ const boats = [
 
 function Hero() {
   return (
-   <section className="relative overflow-visible lg:overflow-hidden bg-white pt-4 pb-2 sm:pt-6 sm:pb-4 lg:pt-8 lg:pb-6 min-h-[60vh] lg:min-h-[70vh]">
+    <section className="relative overflow-visible lg:overflow-hidden bg-white pt-4 pb-2 sm:pt-6 sm:pb-4 lg:pt-8 lg:pb-6 min-h-[60vh] lg:min-h-[70vh]">
 
       <div
         className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_10%_20%,rgba(24,119,242,0.1),transparent_32%),radial-gradient(circle_at_80%_0%,rgba(66,183,42,0.12),transparent_36%)]"
@@ -152,7 +152,7 @@ function Hero() {
             ))}
           </div>
         </div>
-        <div  id="highlights" className="relative h-full" style={{ width: '100%' }}>
+        <div  id="highlights" className="relative h-full lg:min-h-[420px] flex items-stretch" style={{ width: '100%' }}>
           <Map />
         </div>
       </div>
