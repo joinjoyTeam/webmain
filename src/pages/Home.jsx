@@ -58,7 +58,7 @@ const boats = [
   },
   {
     name: 'Private Longtail Boat',//KRABI SEA TOUR (Warisa Boat)
-    type: 'Peace Travel',//Longtail Boat   Peace Travel
+    type: 'One Piece Tour',//Longtail Boat   Peace Travel
     capacity: 12,
     showCapacity: false,   // ✅ แสดงที่นั่ง
     price: 3000,
@@ -67,28 +67,28 @@ const boats = [
     description: 'Private longtail boat, affordable \n and relaxing.',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/1765650127108.jpg',
     link: 'https://wa.me/66624290062',
-    tags:['Groups 4–6','Friends Trip','Local Style','Flexible Time','DIY Itinerary','BYO Food'],
+    tags:['Groups 1–5','Friends Trip','Local Style','Flexible Time','DIY Itinerary'],
     buttonLabel: "Check Available"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
   },
   {
     name: 'Private Luxury Longtail Boat',//KRABI SEA TOUR (Warisa Boat)
-    type: 'Aonang Tour and Travel',//Longtail Boat  Aonang Tour and Travel
+    type: 'The Queen Travel Krabi',//Longtail Boat  Aonang Tour and Travel
     capacity: 12,
     showCapacity: false,   // ✅ แสดงที่นั่ง
-    price: 6000,
+    price: 7000,
     rating: 4.9,
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
     description: 'Private longtail boat with premium comfort, beautiful views \n and great photo spots.',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/S__71000089_0.jpg',
     link: 'https://wa.me/66624290062',
-    tags:['Guide','Sunset Ready','Couples','Photo Lovers','Premium Food','Local Style'],
+    tags:['Groups 1–6','Guide','Sunset Ready','Couples','Photo Lovers','Premium Food','Local Style','GoPro Camera'],
     buttonLabel: "Check Available"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
   },
   {
     name: 'Join Trip Speed Boat',//KRABI SEA TOUR (Warisa Boat)
-    type: 'Beyond Krabi Tours',//Longtail Boat  Beyond Krabi Tours
+    type: 'Nang An Travel & Tour ',//Longtail Boat  Beyond Krabi Tours
     capacity: 12,
     showCapacity: false,   // ✅ แสดงที่นั่ง
     price: 700,
@@ -96,9 +96,9 @@ const boats = [
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
     description: 'Join a speed boat tour to visit Krabi’s top spots quickly and easily.',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/S__86310919.jpg',
-    link: 'https://wa.me/66624290062',
+    link: 'https://joinjoytravel.com/en/trips/31',
     tags:['Time-Saver Travellers','Friends Group','Solo','Fast Travel','Smooth Ride'],
-    buttonLabel: "Check Available"
+    buttonLabel: "Book Now"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
   },
   {
@@ -112,7 +112,7 @@ const boats = [
     description: 'High-end private speed boat with comfort, privacy, and stunning photo spots.',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/1765649975005.jpg',
     link: 'https://wa.me/66624290062',
-    tags:['Fast & Private','Flexible Route','Smooth & Comfortable','VIP Experience'],
+    tags:['Groups 1–5','Fast & Private','Flexible Route','Smooth & Comfortable','VIP Experience'],
     buttonLabel: "Check Available"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
   },
@@ -147,37 +147,44 @@ const boats = [
 ];
 
 const scooters = [
+  
   {
-    name: 'Honda Click 125cc',
-    price: 250,
-    note: 'Easy ride, city use'
-  },
-  {
-    name: 'Yamaha NMAX 155cc',
-    price: 350,
+    name: 'Honda Scoopy  110cc',
+    price: 300,
     note: 'Comfortable & powerful'
   },
   {
-    name: 'Honda PCX 160cc',
-    price: 400,
+    name: 'YAMAHA FAZZIO Hybrid 125c',
+    price: 300,
     note: 'Premium, long ride'
+  },
+  {
+    name: 'Honda Click 125cc',
+    price: 350,
+    note: 'Easy ride, city use'
+  },
+  {
+    name: 'YAMAHA NMAX 155cc',
+    price: 500,
+    note: 'Comfortable & powerful'
   }
+  
 ];
 
 const vans = [
   {
-    name: 'Private Van (City)',
-    price: 1800,
+    name: 'Private SUV (City)',
+    price: 400,
     note: 'Krabi town / Ao Nang area'
   },
   {
     name: 'Airport transfer',
-    price: 2500,
+    price: 600,
     note: 'Hotel ↔ Krabi Airport'
   },
   {
-    name: 'Full-day private van',
-    price: 4500,
+    name: 'Full-day private SUV',
+    price: 2500,
     note: '8 hours with driver'
   }
 ];
@@ -255,7 +262,7 @@ function Hero({ onOpenTransport }) {
 
 
     <p className="text-xs text-slate-500 leading-snug text-center sm:text-left">
-      Scooters, private vans
+      Scooters, private SUV
        <br />
   <span className="opacity-80">&amp; airport transfers</span>
 </p>
@@ -413,7 +420,7 @@ function Home() {
                     <span className="text-xl">🚐</span>
                     <div>
                       <p className="font-semibold text-slate-900">
-                        Private van
+                        Private SUV
                       </p>
                       <p className="text-sm text-slate-500">
                         Airport & day trips, friendly drivers

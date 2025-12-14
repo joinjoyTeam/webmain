@@ -1,3 +1,6 @@
+import React from 'react';
+import { FaFacebookF, FaYoutube } from 'react-icons/fa';
+
 function FourIslandsCard() {
   const islands = [
     {
@@ -38,8 +41,8 @@ function FourIslandsCard() {
     },
   ];
 
-  const fullRouteYoutube = 'https://youtube.com/shorts/mIDeJtAXmJM?feature=shared';
-  const guideFacebook = 'https://www.facebook.com/share/r/1H278RodX6/';
+  const fullRouteYoutube = 'https://www.youtube.com/shorts/qopIHbevjKY';
+  const guideFacebook = 'https://www.facebook.com/reel/610063925507280?locale=th_TH';
 
   return (
     <article className="rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-sm ring-1 ring-white/60 sm:p-5">
@@ -108,46 +111,51 @@ function FourIslandsCard() {
     {island.caption}
   </span>
 
-  <div className="mt-1 flex items-center gap-2 text-[11px] text-slate-400">
+ 
+<div className="mt-1 flex items-center gap-2 text-[11px] text-slate-500">
 
-  <span className="font-medium tracking-tight">
-    Explore more
-  </span>
+  {/* ข้อความ Explore more */}
+  <span className="font-medium tracking-wide whitespace-nowrap">
+  Explore more
+</span>
 
-  <div className="flex items-center gap-1.5 opacity-70 hover:opacity-100 transition">
 
-    {/* Facebook */}
-    <a
-      href={island.links.facebook}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`${island.name} on Facebook`}
-      className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/70 ring-1 ring-slate-200 transition hover:ring-slate-300"
-    >
-      <img
-        src="https://cdn.simpleicons.org/facebook/64748b"
-        alt="Facebook"
-        className="h-3.5 w-3.5"
-      />
-    </a>
+  {/* แสดงไอคอนเฉพาะเมื่อ island.links มีอยู่จริง */}
+  {island.links && island.links.facebook && island.links.youtube && (
+    <div className="flex items-center gap-1.5 opacity-70 hover:opacity-100 transition">
 
-    {/* YouTube */}
-    <a
-      href={island.links.youtube}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`${island.name} on YouTube`}
-      className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/70 ring-1 ring-slate-200 transition hover:ring-slate-300"
-    >
-      <img
-        src="https://cdn.simpleicons.org/youtube/64748b"
-        alt="YouTube"
-        className="h-3.5 w-3.5"
-      />
-    </a>
+      {/* Facebook */}
+      <a
+        href={island.links.facebook}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${island.name} on Facebook`}
+        className="inline-flex h-6 w-6 items-center justify-center rounded-full
+                   border border-slate-200 bg-white/80
+                   hover:border-slate-300 hover:scale-105 transition"
+      >
+        <FaFacebookF className="h-3.5 w-3.5 text-slate-500" />
+      </a>
 
-  </div>
+      {/* YouTube */}
+      <a
+        href={island.links.youtube}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${island.name} on YouTube`}
+        className="inline-flex h-6 w-6 items-center justify-center rounded-full
+                   border border-slate-200 bg-white/80
+                   hover:border-slate-300 hover:scale-105 transition"
+      >
+        <FaYoutube className="h-3.5 w-3.5 text-slate-500" />
+
+      </a>
+
+    </div>
+  )}
+
 </div>
+
 
 
 
