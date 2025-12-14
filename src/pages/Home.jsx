@@ -96,7 +96,7 @@ const boats = [
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
     description: 'Join a speed boat tour to visit Krabi’s top spots quickly and easily.',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/S__86310919.jpg',
-    link: 'https://joinjoytravel.com/en/trips/31',
+    link: 'https://joinjoytravel.com/en/trips/34',
     tags:['Time-Saver Travellers','Friends Group','Solo','Fast Travel','Smooth Ride'],
     buttonLabel: "Book Now"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
