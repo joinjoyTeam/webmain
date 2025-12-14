@@ -49,8 +49,8 @@ const boats = [
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
     description: 'Join a group trip on a traditional longtail boat at an affordable price.',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/KRABISEATOUR.jpg',
-    link: 'https://joinjoytravel.com/en/trips/24',
-    tags:[],
+    link: 'https://joinjoytravel.com/en/trips/30',
+    tags:['Budget','Solo','Local','Local Style','Guide','Fixed Time','Backpackers'],
     buttonLabel: "Book Now"
     
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
@@ -61,13 +61,13 @@ const boats = [
     type: 'Peace Travel',//Longtail Boat   Peace Travel
     capacity: 12,
     showCapacity: false,   // ✅ แสดงที่นั่ง
-    price: 500,
+    price: 3000,
     rating: 4.9,
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
     description: 'Private longtail boat, affordable \n and relaxing.',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/1765650127108.jpg',
     link: 'https://wa.me/66624290062',
-    tags:[],
+    tags:['Groups 4–6','Friends Trip','Local Style','Flexible Time','DIY Itinerary','BYO Food'],
     buttonLabel: "Check Available"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
   },
@@ -76,13 +76,13 @@ const boats = [
     type: 'Aonang Tour and Travel',//Longtail Boat  Aonang Tour and Travel
     capacity: 12,
     showCapacity: false,   // ✅ แสดงที่นั่ง
-    price: 500,
+    price: 6000,
     rating: 4.9,
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
     description: 'Private longtail boat with premium comfort, beautiful views \n and great photo spots.',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/S__71000089_0.jpg',
     link: 'https://wa.me/66624290062',
-    tags:[],
+    tags:['Guide','Sunset Ready','Couples','Photo Lovers','Premium Food','Local Style'],
     buttonLabel: "Check Available"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
   },
@@ -91,13 +91,13 @@ const boats = [
     type: 'Beyond Krabi Tours',//Longtail Boat  Beyond Krabi Tours
     capacity: 12,
     showCapacity: false,   // ✅ แสดงที่นั่ง
-    price: 500,
+    price: 700,
     rating: 4.9,
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
     description: 'Join a speed boat tour to visit Krabi’s top spots quickly and easily.',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/S__86310919.jpg',
     link: 'https://wa.me/66624290062',
-    tags:[],
+    tags:['Time-Saver Travellers','Friends Group','Solo','Fast Travel','Smooth Ride'],
     buttonLabel: "Check Available"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
   },
@@ -106,13 +106,13 @@ const boats = [
     type: 'Wonderful Tour Krabi',//Longtail Boat  Wonderful Tour Krabi
     capacity: 12,
     showCapacity: false,   // ✅ แสดงที่นั่ง
-    price: 500,
+    price: 9000,
     rating: 4.9,
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
     description: 'High-end private speed boat with comfort, privacy, and stunning photo spots.',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/1765649975005.jpg',
     link: 'https://wa.me/66624290062',
-    tags:[],
+    tags:['Fast & Private','Flexible Route','Smooth & Comfortable','VIP Experience'],
     buttonLabel: "Check Available"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
   },
