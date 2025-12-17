@@ -50,7 +50,7 @@ export const LOCATIONS = [
     shortDescription: 'Thap Island is connected with Mor Island and make the sand bank when the water is lowtide which we called Separated Sea.',
     facebook: 'https://www.facebook.com/share/r/1H278RodX6/',
     tiktok: 'https://vt.tiktok.com/ZSPBXPGWL/',
-    intagram: 'https://www.instagram.com/reel/DP7u2ffjxAO/?igsh=M3R3a2V4OGFra3Jk',
+    instagram: 'https://www.instagram.com/reel/DP7u2ffjxAO/?igsh=M3R3a2V4OGFra3Jk',
     youtube: 'https://youtube.com/shorts/mIDeJtAXmJM?feature=shared'
   },
  {
@@ -73,7 +73,9 @@ export const LOCATIONS = [
     score: 82,
     coordinates: [8.042759856818227, 98.81174709797625],
     highlightTag: 'Starting Point',
-    shortDescription: 'Local Foods and souvenirs.'
+    shortDescription: 'Local Foods and souvenirs.',
+    facebook: 'https://www.facebook.com/share/p/1KikJzUVjw/',
+    instagram: 'https://www.instagram.com/p/DSWfbxAGAv3/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=='
   },
   {
     id: 'Phranang-Cave',
@@ -131,7 +133,7 @@ export const LOCATIONS = [
     shortDescription: 'Famous sandbar that appears at low tide.',
     facebook: 'https://www.facebook.com/share/r/1H278RodX6/',
     tiktok: 'https://vt.tiktok.com/ZSPBXPGWL/',
-    intagram: 'https://www.instagram.com/reel/DP7u2ffjxAO/?igsh=M3R3a2V4OGFra3Jk',
+    instagram: 'https://www.instagram.com/reel/DP7u2ffjxAO/?igsh=M3R3a2V4OGFra3Jk',
     youtube: 'https://youtube.com/shorts/mIDeJtAXmJM?feature=shared'
   },
   {
@@ -145,18 +147,7 @@ export const LOCATIONS = [
     highlightTag: 'Lagoon',
     shortDescription: 'One of the most beautiful Island in Krabi with clear water and white sand beach.'
   },
-  {
-    id: 'Ao-Nang-Landmark-night-market',
-    name: 'Ao Nang Landmark night market',
-    group: 'NightMarket',
-    tags: [ 'Foodie', 'Thai Food','Cheap Food','Solo', 'Peace', 'Couple', 'Family', 'Friend'], 
-    recommended: true, 
-    score: 82,
-    coordinates: [8.042759856818227, 98.81174709797625],
-    highlightTag: 'Starting Point',
-    shortDescription: 'Local Foods and souvenirs.'
-  },
-   
+
    {
     id: 'phi-phi',
     name: 'Phi Phi Islands',
@@ -222,7 +213,9 @@ export const LOCATIONS = [
     score: 82,
     coordinates: [8.042507, 98.811847],
     highlightTag: 'Starting Point',
-    shortDescription: 'Free exciting,One of the best Fire Show in Ao Nang Landmark.'
+    shortDescription: 'Free exciting,One of the best Fire Show in Ao Nang Landmark.',
+    facebook:'https://www.facebook.com/share/p/17aU2R93P9/',
+    instagram:'https://www.instagram.com/p/DSXA85fGG7i/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
   },
   {
     id: 'Ao-Nang-Landmark-Stadium',
@@ -327,7 +320,7 @@ export const LOCATIONS = [
     //******************************************** */
     // facebook: 'https://www.facebook.com/Joinjoytravel',
     // tiktok: 'https://www.tiktok.com/@joinjoytravel?lang=en',
-    // intagram: 'https://www.instagram.com/joinjoytravel/',
+    // instagram: 'https://www.instagram.com/joinjoytravel/',
     // youtube: 'https://www.youtube.com/@joinjoytravel'
     //googleMapUrl: 'https://www.google.com/maps/search/?api=1&query=8.029270233730031,98.8240309893113',
   },

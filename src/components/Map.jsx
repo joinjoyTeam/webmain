@@ -352,9 +352,9 @@ function Map() {
                   </a>
                 )}
 
-                {activePlace.intagram && (
-                  <a href={activePlace.intagram} target="_blank" rel="noopener noreferrer">
-                    <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="intagram" className="social-icon" />
+                {activePlace.instagram && (
+                  <a href={activePlace.instagram} target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="instagram" className="social-icon" />
                   </a>
                 )}
 
