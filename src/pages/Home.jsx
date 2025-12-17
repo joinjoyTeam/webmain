@@ -49,7 +49,7 @@ const boats = [
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
     description: 'Join a group trip on a traditional longtail boat at an affordable price.',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/KRABISEATOUR.jpg',
-    link: 'https://joinjoytravel.com/en/trips/30',
+    link: 'https://krabi.joinjoytravel.com/en/trips/30',
     tags:['Budget','Solo','Local','Local Style','Guide','Fixed Time','Backpackers'],
     buttonLabel: "Book Now"
     
@@ -96,7 +96,7 @@ const boats = [
     showRating: false, // ซ่อนเรตติ้งสำหรับเรือท้องถิ่น
     description: 'Join a speed boat tour to visit Krabi’s top spots quickly and easily.',
     image: 'https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/S__86310919.jpg',
-    link: 'https://joinjoytravel.com/en/trips/34',
+    link: 'https://krabi.joinjoytravel.com/en/trips/34',
     tags:['Time-Saver Travellers','Friends Group','Solo','Fast Travel','Smooth Ride'],
     buttonLabel: "Book Now"
     //tags: ['Sunset cruise', 'Premium bar', 'Crewed service']
