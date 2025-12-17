@@ -9,9 +9,9 @@
     "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "preview": "vite preview",  
+    "preview": "vite preview"
     
-   "postbuild": "rmdir /s /q docs & mkdir docs & xcopy dist docs /E /I /Y & mkdir docs\\th 2>nul & mkdir docs\\en 2>nul & copy redirects\\th\\index.html docs\\th\\index.html & copy redirects\\en\\index.html docs\\en\\index.html"
+  
 
   },
   "dependencies": {
