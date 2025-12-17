@@ -9,7 +9,9 @@
     "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "preview": "vite preview"
+    "preview": "vite preview",  
+    
+    "postbuild": "rmdir /s /q docs & mkdir docs & xcopy dist docs /E /I /Y & mkdir docs\\th 2>nul & copy redirects\\th\\index.html docs\\th\\index.html"
   },
   "dependencies": {
     "maplibre-gl": "^4.7.0",
