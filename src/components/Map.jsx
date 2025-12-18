@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import FiltersContainer from './FiltersContainer';
 import { GROUP_COLORS, GROUPS, LOCATIONS, SPECIAL_TAGS } from '../utils/locations';
+import { ALL_GROUP_KEY, normalizeGroupKey } from '../utils/groupKeys';
 import './Map.css';
 
 const MAP_CENTER = [8.043, 98.915];
@@ -38,9 +39,10 @@ const prepareLocations = (locations) =>
 
 function filterLocations(locations, selectedGroup, selectedTags, selectedStars) {
   let result = [...locations];
+  const normalizedGroup = normalizeGroupKey(selectedGroup);
 
-  if (selectedGroup && selectedGroup !== 'All') {
-    result = result.filter((location) => location.group === selectedGroup);
+  if (normalizedGroup && normalizedGroup !== ALL_GROUP_KEY) {
+    result = result.filter((location) => normalizeGroupKey(location.group) === normalizedGroup);
   }
 
   if (selectedTags.length) {
@@ -82,7 +84,7 @@ function Map() {
   const mapInstanceRef = useRef(null);
   const filtersRef = useRef(null);
   const [mapReady, setMapReady] = useState(false);
-  const [selectedGroup, setSelectedGroup] = useState('All');
+  const [selectedGroup, setSelectedGroup] = useState(ALL_GROUP_KEY);
   const [selectedTags, setSelectedTags] = useState([]);
   const [selectedStars, setSelectedStars] = useState([]);//'star-5'
   const [activePlace, setActivePlace] = useState(null);
@@ -93,6 +95,8 @@ function Map() {
     () => filterLocations(locationData, selectedGroup, selectedTags, selectedStars),
     [locationData, selectedGroup, selectedTags, selectedStars],
   );
+
+  const handleSelectGroup = (group) => setSelectedGroup(normalizeGroupKey(group));
 
   useEffect(() => {
     if (!activePlace && filteredPlaces.length) {
@@ -299,7 +303,7 @@ function Map() {
         <FiltersContainer
           groups={GROUPS}
           selectedGroup={selectedGroup}
-          onSelectGroup={(group) => setSelectedGroup(group)}
+          onSelectGroup={handleSelectGroup}
           specialTags={SPECIAL_TAGS}
           selectedTags={selectedTags}
           onToggleTag={(tag) =>

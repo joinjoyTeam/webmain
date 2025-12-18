@@ -1,14 +1,19 @@
 import React from 'react';
 import './FilterBar.css';
+import { ALL_GROUP_KEY, normalizeGroupKey } from '../utils/groupKeys';
 
 const groupSpecialTags = {
-  Shows: ['FireShow', 'ThaiBoxing'],
-  Beach: ['Sunset', 'Iconic'],
-  Island: ['4 Islands', 'Iconic'],
+  shows: ['FireShow', 'ThaiBoxing'],
+  beach: ['Sunset', 'Iconic'],
+  island: ['4 Islands', 'Iconic'],
 };
 
 function SpecialFilters({ specialTags, selectedTags, onToggleTag, selectedGroup }) {
-  const relatedTags = selectedGroup ? groupSpecialTags[selectedGroup] || [] : [];
+  const normalizedGroup = normalizeGroupKey(selectedGroup);
+  const relatedTags =
+    normalizedGroup && normalizedGroup !== ALL_GROUP_KEY
+      ? groupSpecialTags[normalizedGroup] || []
+      : [];
 
   return (
     <div className="filter-row" aria-label="Special filters">
