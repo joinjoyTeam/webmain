@@ -28,6 +28,10 @@ export const LOCATIONS = [
     coordinates: [8.042996646771988, 98.80915062374889],
     highlightTag: 'Sunset Point',
     shortDescription: 'Quiet sunset spot near the Landmark night market.',
+    facebook: 'https://www.facebook.com/share/p/1C4cobekUE/',
+    instagram: 'https://www.instagram.com/p/DSZm_z_mHAE/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==',
+    youtube: 'https://youtube.com/shorts/fjy-puFUjEo?feature=share',
+    tiktok: 'https://www.tiktok.com/@joinjoytravel/video/7504968571139656978?is_from_webapp=1&sender_device=pc&web_id=7538637241061525013'
   },
    {
     id: 'railay-west-sunset',
@@ -77,7 +81,9 @@ export const LOCATIONS = [
     highlightTag: 'Starting Point',
     shortDescription: 'Local Foods and souvenirs.',
     facebook: 'https://www.facebook.com/share/p/1KikJzUVjw/',
-    instagram: 'https://www.instagram.com/p/DSWfbxAGAv3/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=='
+    instagram: 'https://www.instagram.com/p/DSWfbxAGAv3/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==',
+    youtube: 'https://youtube.com/shorts/PWWVPjXL1PQ?feature=share',
+    tiktok: 'https://www.tiktok.com/@joinjoytravel/video/7502391935508991240?is_from_webapp=1&sender_device=pc&web_id=7538637241061525013'
   },
   {
     id: 'Phranang-Cave',
@@ -217,18 +223,24 @@ export const LOCATIONS = [
     highlightTag: 'Starting Point',
     shortDescription: 'Free exciting,One of the best Fire Show in Ao Nang Landmark.\nShow Time:  9:00–9:30 PM',
     facebook:'https://www.facebook.com/share/p/17aU2R93P9/',
-    instagram:'https://www.instagram.com/p/DSXA85fGG7i/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+    instagram:'https://www.instagram.com/p/DSXA85fGG7i/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    youtube:'https://youtube.com/shorts/ZKKX7wshfL4?feature=share',
+    tiktok:'https://www.tiktok.com/@joinjoytravel/video/7501676265171225863?is_from_webapp=1&sender_device=pc&web_id=7538637241061525013'
   },
   {
     id: 'Ao-Nang-Landmark-Stadium',
-    name: 'Ao Nang Landmark Stadium',
+    name: 'Ao Nang Landmark Boxing Stadium',
     group: 'Shows',
     tags: ['Exciting','Solo','Friend','ThaiBoxing'],
     recommended: false,
     score: 79, 
     coordinates: [8.04291741147765, 98.81260362536653],
     highlightTag: ['Adventure Spot'],
-    shortDescription: 'One of the best Muay Thai Boxing Show in Krabi.'
+    shortDescription: 'One of the best Muay Thai Boxing Show in Krabi.',
+    facebook:'https://www.facebook.com/share/p/1BXEN8UvUZ/',
+    instagram:'https://www.instagram.com/p/DSZnMhcGHkn/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==',
+    youtube:'https://youtube.com/shorts/Fql1AxE3rMk?feature=share',
+    tiktok:'https://www.tiktok.com/@joinjoytravel/video/7512419054502595848?is_from_webapp=1&sender_device=pc&web_id=7538637241061525013'
   },
 {
     id: 'Boxing Stadium',
