@@ -307,12 +307,12 @@
   .map-section {
     display: grid;
     grid-template-rows: auto 1fr;
-    row-gap: 14px;
+    row-gap: 60px;
   }
 
   .filter-container {
     position: sticky;
-    top: 18px;
+    top: 60px;
     z-index: 10;
   }
 }
