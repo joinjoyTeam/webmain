@@ -24,6 +24,7 @@ function FiltersContainer({
           specialTags={specialTags}
           selectedTags={selectedTags}
           onToggleTag={onToggleTag}
+          selectedGroup={selectedGroup}
         />
       </div>
     </div>
