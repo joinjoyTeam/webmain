@@ -1,5 +1,6 @@
 import React from 'react';
 import './FilterBar.css';
+import { normalizeGroupKey } from '../utils/groupKeys';
 
 function formatLabel(text) {
   return text
@@ -45,16 +46,19 @@ function GroupFilters({ groups, selectedGroup, onSelect }) {
       
       </div>
       <div className="filter-row-scroll">
-        {groups.map((group) => (
+        {groups.map((group) => {
+          const groupKey = normalizeGroupKey(group);
+          return (
           <button
             key={group}
             type="button"
-            className={`filter-chip filter-chip--micro ${selectedGroup === group ? 'filter-chip--active' : ''}`}
+            className={`filter-chip filter-chip--micro ${selectedGroup === groupKey ? 'filter-chip--active' : ''}`}
             onClick={() => onSelect(group)}
           >
             {formatLabel(group)}
           </button>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
