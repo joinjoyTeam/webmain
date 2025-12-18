@@ -53,7 +53,7 @@ function GroupFilters({ groups, selectedGroup, onSelect }) {
             key={group}
             type="button"
             className={`filter-chip filter-chip--micro ${selectedGroup === groupKey ? 'filter-chip--active' : ''}`}
-            onClick={() => onSelect(group)}
+            onClick={() => onSelect(groupKey)}
           >
             {formatLabel(group)}
           </button>

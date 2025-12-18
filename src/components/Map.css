@@ -168,16 +168,24 @@
   gap: 10px;
   align-items: center;
 }
-
 .krabi-info-subtitle {
   font-size: 12px;
   opacity: 0.92;
   line-height: 1.45;
+  white-space: pre-line;   /* ⭐ สำคัญ */
+  overflow: visible;       /* ⭐ สำคัญ */
+}
+
+
+/* .krabi-info-subtitle {
+  font-size: 12px;
+  opacity: 0.92;
+  line-height: 1.45;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
+} */
 
 .subtitle-with-icons {
   display: flex;

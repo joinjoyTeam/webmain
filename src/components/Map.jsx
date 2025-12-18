@@ -5,6 +5,7 @@ import { GROUP_COLORS, GROUPS, LOCATIONS, SPECIAL_TAGS } from '../utils/location
 import { ALL_GROUP_KEY, normalizeGroupKey } from '../utils/groupKeys';
 import './Map.css';
 
+
 const MAP_CENTER = [8.043, 98.915];
 const MAP_STYLE = 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json';
 

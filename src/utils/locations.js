@@ -1,4 +1,5 @@
 
+
 export const GROUP_COLORS = {
   Beach: '#0ea5e9',
   //Sunset: '#f97316',
@@ -14,14 +15,14 @@ export const GROUP_COLORS = {
 
 };
 
-export const SPECIAL_TAGS = ['Iconic','Solo', 'Couple', 'Family', 'Friend','4 Islands','FireShow','ThaiBoxing','Sunset'];
+export const SPECIAL_TAGS = ['Iconic','Solo', 'Couple', 'Family', 'Friend','4 Islands','FireShow','ThaiBoxing','Sunset','Ao-Nang Area'];
 
 export const LOCATIONS = [
   {
     id: 'nopparat',
     name: 'Nopparat Thara Beach',
     group: 'Beach',
-    tags: ['Family', 'Easy Walk','Sunset'],
+    tags: ['Family', 'Easy Walk','Sunset','Ao-Nang Area'],
     recommended: false,
     score: 96,
     coordinates: [8.042996646771988, 98.80915062374889],
@@ -69,7 +70,7 @@ export const LOCATIONS = [
     id: 'Ao-Nang-Landmark-night-market',
     name: 'Ao Nang Landmark night market',
     group: 'NightMarket',
-    tags: [ 'Foodie', 'Thai Food','Cheap Food','Solo', 'Peace', 'Couple', 'Family', 'Friend'], 
+    tags: [ 'Foodie', 'Thai Food','Cheap Food','Solo', 'Peace', 'Couple', 'Family', 'Friend','Ao-Nang Area'], 
     recommended: false, 
     score: 82,
     coordinates: [8.042759856818227, 98.81174709797625],
@@ -104,7 +105,7 @@ export const LOCATIONS = [
     id: 'Poda-Island',
     name: 'Poda Island',
     group: 'Island',
-    tags: ['Swimming',   '4 Islands', '7 Islands','Couple', 'Family', 'Friend'],
+    tags: ['Swimming',   '4 Islands', '7 Islands','Couple', 'Family', 'Friend','Sunset'],
     recommended: false,
     score: 81, 
     coordinates: [7.974786505695185, 98.81199963655986],
@@ -187,7 +188,7 @@ export const LOCATIONS = [
     id: 'Aonang-Fire-show',
     name: 'Ao nang Fire show',
     group: 'Shows',
-    tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend','FireShow'],
+    tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend','FireShow','Ao-Nang Area'],
     recommended: false,
     score: 87,   
     coordinates: [8.031154039226333, 98.82230946213717],
@@ -209,12 +210,12 @@ export const LOCATIONS = [
     id: 'Ao-Nang-Landmark-Fire-Show',
     name: 'Ao Nang Landmark Fire Show',
     group: 'Shows',
-    tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend','FireShow'],
+    tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend','FireShow','Ao-Nang Area'],
     recommended: false,  
     score: 82,
     coordinates: [8.042507, 98.811847],
     highlightTag: 'Starting Point',
-    shortDescription: 'Free exciting,One of the best Fire Show in Ao Nang Landmark.',
+    shortDescription: 'Free exciting,One of the best Fire Show in Ao Nang Landmark.\nShow Time:  9:00–9:30 PM',
     facebook:'https://www.facebook.com/share/p/17aU2R93P9/',
     instagram:'https://www.instagram.com/p/DSXA85fGG7i/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
   },

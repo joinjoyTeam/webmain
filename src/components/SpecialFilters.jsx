@@ -5,7 +5,7 @@ import { ALL_GROUP_KEY, normalizeGroupKey } from '../utils/groupKeys';
 const groupSpecialTags = {
   shows: ['FireShow', 'ThaiBoxing'],
   beach: ['Sunset', 'Iconic'],
-  island: ['4 Islands', 'Iconic'],
+  island: ['4 Islands', 'Iconic','Sunset'],
 };
 
 function SpecialFilters({ specialTags, selectedTags, onToggleTag, selectedGroup }) {
