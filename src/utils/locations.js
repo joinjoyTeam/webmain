@@ -1,26 +1,27 @@
+
 export const GROUP_COLORS = {
   Beach: '#0ea5e9',
-  Sunset: '#f97316',
-  FireShow : '#fb002aff',
+  //Sunset: '#f97316',
+  Shows : '#fb002aff',
   Adventure: '#10b981',//
   Snorkel: '#3b82f6',
   Viewpoint: '#fb7185',
   Island: '#10b981',
-  ThaiBoxing: '#FFD700',     // โทนทองไทย
+  //ThaiBoxing: '#FFD700',     // โทนทองไทย
   Kayaking: '#06b6d4',           // แนวสปอร์ต น้ำทะเล
   NightMarket: '#8b5cf6',     // โทนนีออนกลางคืน
-  Café: '#b45309',
+  cafeAndRestaurant: '#7C9A6D',
 
 };
 
-export const SPECIAL_TAGS = ['Iconic','Solo', 'Couple', 'Family', 'Friend','4 Islands'];
+export const SPECIAL_TAGS = ['Iconic','Solo', 'Couple', 'Family', 'Friend','4 Islands','FireShow','ThaiBoxing','Sunset'];
 
 export const LOCATIONS = [
   {
-    id: 'nopparat-sunset',
-    name: 'Nopparat Thara Beach Sunset',
-    group: 'Sunset',
-    tags: ['Family', 'Easy Walk'],
+    id: 'nopparat',
+    name: 'Nopparat Thara Beach',
+    group: 'Beach',
+    tags: ['Family', 'Easy Walk','Sunset'],
     recommended: false,
     score: 96,
     coordinates: [8.042996646771988, 98.80915062374889],
@@ -29,9 +30,9 @@ export const LOCATIONS = [
   },
    {
     id: 'railay-west-sunset',
-    name: 'Railay West Sunset',
-    group: 'Sunset',  
-    tags: ['Iconic','Couple','Romantic', 'Solo'], 
+    name: 'Railay West Beach',
+    group: 'Beach',  
+    tags: ['Iconic','Couple','Romantic', 'Solo','Sunset'], 
     recommended: true,  
     score: 100,
     coordinates: [8.011867631403003, 98.83779902910392],
@@ -69,7 +70,7 @@ export const LOCATIONS = [
     name: 'Ao Nang Landmark night market',
     group: 'NightMarket',
     tags: [ 'Foodie', 'Thai Food','Cheap Food','Solo', 'Peace', 'Couple', 'Family', 'Friend'], 
-    recommended: true, 
+    recommended: false, 
     score: 82,
     coordinates: [8.042759856818227, 98.81174709797625],
     highlightTag: 'Starting Point',
@@ -79,7 +80,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Phranang-Cave',
-    name: 'Phranang Cave Beach',
+    name: 'Phranang Beach',
     group: 'Beach',
     tags: [ 'Unseen',  '4 Islands', '7 Islands', 'Sunset', 'Rock climbing', 'Romantic', 'Kayak','Solo','Couple'],
     recommended: false, //'Iconic','Solo', 'Peace', 'Couple', 'Family', 'Friendly'
@@ -163,7 +164,7 @@ export const LOCATIONS = [
     id: 'Maya-Bay',
     name: 'Maya Bay',
     group: 'Beach',
-    tags: ['Iconic','Swimming', 'Unseen',  'Sunset'
+    tags: ['Iconic','Swimming', 'Unseen'
       , 'Sea Animal', 'Outstanding', 'Snorkeling','Solo', 'Peace', 'Couple', 'Family', 'Friend'], 
     recommended: true,
     score: 91,
@@ -174,8 +175,8 @@ export const LOCATIONS = [
   {
     id: 'Centara-Fire-Show',
     name: 'Centara Fire Show',
-    group: 'FireShow',  
-    tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend'],
+    group: 'Shows',  
+    tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend','FireShow'],
     recommended: false,   
     score: 89, 
     coordinates: [8.028574742666587, 98.8246180041217],
@@ -185,8 +186,8 @@ export const LOCATIONS = [
   {
     id: 'Aonang-Fire-show',
     name: 'Ao nang Fire show',
-    group: 'FireShow',
-    tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend'],
+    group: 'Shows',
+    tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend','FireShow'],
     recommended: false,
     score: 87,   
     coordinates: [8.031154039226333, 98.82230946213717],
@@ -196,8 +197,8 @@ export const LOCATIONS = [
   {
     id: 'Aonang-Fire-show-2',
     name: 'Ao nang Fire show 2',
-    group: 'FireShow',
-    tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend'],
+    group: 'Shows',
+    tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend','FireShow'],
     recommended: false,
     score: 88, 
     coordinates: [8.0317472106498, 98.82147600026569],
@@ -207,8 +208,8 @@ export const LOCATIONS = [
   {
     id: 'Ao-Nang-Landmark-Fire-Show',
     name: 'Ao Nang Landmark Fire Show',
-    group: 'FireShow',
-    tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend'],
+    group: 'Shows',
+    tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend','FireShow'],
     recommended: false,  
     score: 82,
     coordinates: [8.042507, 98.811847],
@@ -220,8 +221,8 @@ export const LOCATIONS = [
   {
     id: 'Ao-Nang-Landmark-Stadium',
     name: 'Ao Nang Landmark Stadium',
-    group: 'ThaiBoxing',
-    tags: ['Exciting','Solo','Friend'],
+    group: 'Shows',
+    tags: ['Exciting','Solo','Friend','ThaiBoxing'],
     recommended: false,
     score: 79, 
     coordinates: [8.04291741147765, 98.81260362536653],
@@ -231,8 +232,8 @@ export const LOCATIONS = [
 {
     id: 'Boxing Stadium',
     name: 'Krabi International Boxing Stadium',
-    group: 'ThaiBoxing',
-    tags: ['Exciting','Solo','Friend'],
+    group: 'Shows',
+    tags: ['Exciting','Solo','Friend','ThaiBoxing'],
     recommended: false,
     score: 78, 
     coordinates: [8.0463938,98.8475367],
@@ -243,8 +244,8 @@ export const LOCATIONS = [
   {
     id: 'Ao-nang-krabi-Stadium',
     name: 'Ao nang krabi Stadium',
-    group: 'ThaiBoxing',
-    tags: ['Exciting','Solo','Friend'],
+    group: 'Shows',
+    tags: ['Exciting','Solo','Friend','ThaiBoxing',],
     recommended: false,
     score: 85, 
     coordinates: [8.046512790919532, 98.81373330764366],
@@ -298,8 +299,8 @@ export const LOCATIONS = [
   {
     id: 'Khaothong-Hill',
     name: 'Khaothong Hill',
-    group: 'Sunset',
-    tags: ['Dinner', 'Sunset','Romatic','Couple', 'Family', 'Friend'],
+    group: 'cafeAndRestaurant',
+    tags: ['Dinner', 'Sunset','Romatic','Couple', 'Family', 'Friend','Sunset'],
     recommended: false,
     score: 85,  
     coordinates: [8.17303796762973, 98.75299009230848],
@@ -309,8 +310,8 @@ export const LOCATIONS = [
   {
     id: 'Ao-Nang-Beach',
     name: 'Ao Nang Beach',
-    group: 'Sunset',
-    tags:'',
+    group: 'Beach',
+    tags:'Sunset',
     //tags: ['Sunset', 'Swimming', 'Activities','Solo', 'Peace', 'Couple', 'Family', 'Friend'],
     recommended: false,
     score: 95,  
@@ -338,7 +339,7 @@ export const LOCATIONS = [
   {
     id: 'Cafe',
     name: 'Andalay Beach Bar & Cafe',
-    group: 'Sunset',
+    group: 'cafeAndRestaurant',
     tags: ['Dinner','Sunset','Romatic', 'Couple', 'Family', 'Friend'], 
     recommended: false,
     score: 78,   
@@ -428,8 +429,8 @@ export const LOCATIONS = [
   {
     id: 'Ko-Poda-Beach',
     name: 'Ko Poda Beach',
-    group: 'Sunset',
-    tags: ['Island','Couple', 'Family', 'Friend','Couple','4 Islands'],
+    group: 'Beach',
+    tags: ['Island','Couple', 'Family', 'Friend','Couple','4 Islands','Sunset'],
     recommended: false,
     score: 74,  //'Iconic','Solo', 'Peace', 'Couple', 'Family', 'Friendly'
     coordinates: [7.9722381,98.809101], 

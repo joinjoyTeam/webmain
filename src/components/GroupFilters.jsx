@@ -1,6 +1,14 @@
 import React from 'react';
 import './FilterBar.css';
 
+function formatLabel(text) {
+  return text
+    .replace(/And/g, " & ")
+    .replace(/([A-Z])/g, " $1")
+    .replace(/^./, c => c.toUpperCase())
+}
+
+
 function GroupFilters({ groups, selectedGroup, onSelect }) {
   return (
     <div className="
@@ -44,7 +52,7 @@ function GroupFilters({ groups, selectedGroup, onSelect }) {
             className={`filter-chip filter-chip--micro ${selectedGroup === group ? 'filter-chip--active' : ''}`}
             onClick={() => onSelect(group)}
           >
-            {group}
+            {formatLabel(group)}
           </button>
         ))}
       </div>
