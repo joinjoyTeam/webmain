@@ -302,6 +302,20 @@
   transform: translateZ(0);         /* สร้าง GPU layer ใหม่ */
   will-change: transform;           /* บอก browser ว่าจะ transform */
 }
+
+@media (min-width: 1024px) {
+  .map-section {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    row-gap: 14px;
+  }
+
+  .filter-container {
+    position: sticky;
+    top: 18px;
+    z-index: 10;
+  }
+}
 @media (max-width: 768px) {
   .map-canvas {
     height: 360px;
