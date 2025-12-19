@@ -12,7 +12,7 @@ function Navbar() {
   ];
 
   const whatsappHref = "https://wa.me/66624290062";
-  const website = "https://joinjoytravel.com/en";
+  const website = "https://krabi.joinjoytravel.com/en";
 
   const closeMenu = () => setIsMenuOpen(false);
 
