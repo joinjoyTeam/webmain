@@ -35,6 +35,7 @@ export const LOCATIONS = [
   },
    {
     id: 'railay-west-sunset',
+    slug: 'railay-west-sunset',
     name: 'Railay West Beach',
     group: 'Beach',  
     tags: ['Iconic','Couple','Romantic', 'Solo','Sunset'], 
@@ -46,6 +47,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Thap-Island',
+    slug: 'thap-island',
     name: 'Thap Island And Mor Island ',
     group: 'Island',
     tags: ['Iconic',  '4 Islands', '7 Islands', 'Solo', 'Couple', 'Family', 'Friend'],
@@ -61,6 +63,7 @@ export const LOCATIONS = [
   },
  {
     id: 'Hong-Island-view',
+    slug: 'hong-island-viewpoint',
     name: 'Hong Island Viewpoint',
     group: 'Viewpoint',
     tags: ['Iconic','Swimming',  'Unseen', 'Romantic', 'Solo', 'Couple', 'Family', 'Friend'],
@@ -72,6 +75,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Ao-Nang-Landmark-night-market',
+    slug: 'ao-nang-landmark-night-market',
     name: 'Ao Nang Landmark night market',
     group: 'NightMarket',
     tags: [ 'Foodie', 'Thai Food','Cheap Food','Solo', 'Peace', 'Couple', 'Family', 'Friend','Ao-Nang Area'], 
@@ -87,6 +91,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Phranang-Cave',
+    slug: 'phranang-beach',
     name: 'Phranang Beach',
     group: 'Beach',
     tags: [ 'Unseen',  '4 Islands', '7 Islands', 'Sunset', 'Rock climbing', 'Romantic', 'Kayak','Solo','Couple'],
@@ -98,6 +103,7 @@ export const LOCATIONS = [
   },
    {
     id: 'Phranang-Cave',
+    slug: 'phranang-cave',
     name: 'Phranang Cave',
     group: 'Viewpoint',
     tags: [ 'Unseen',  '4 Islands', '7 Islands',  'Romantic', 'Kayak','Solo','Couple'],
@@ -109,6 +115,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Poda-Island',
+    slug: 'poda-island',
     name: 'Poda Island',
     group: 'Island',
     tags: ['Swimming',   '4 Islands', '7 Islands','Couple', 'Family', 'Friend','Sunset'],
@@ -120,6 +127,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Chicken-Island',
+    slug: 'chicken-island',
     name: 'Chicken Island',
     group: 'Island',
     tags: [ 'Unseen','Iconic',  '4 Islands', '7 Islands', 'Skockeling','Family', 'Friend'],
@@ -131,6 +139,7 @@ export const LOCATIONS = [
   },
   {
     id: 'thale-waek',
+    slug: 'thale-waek',
     name: 'Thale Waek',
     group: 'Beach',
     tags: ['Iconic','Sandbar',  '4 Islands', '7 Islands','Solo', 'Peace', 'Couple', 'Family', 'Friend'],
@@ -146,6 +155,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Hong-Island',
+    slug: 'hong-island',
     name: 'Hong Island',
     group: 'Island',
     tags: ['Iconic','Swimming',  'Unseen', 'Romantic', 'Solo', 'Couple', 'Family', 'Friend'],
@@ -158,6 +168,7 @@ export const LOCATIONS = [
 
    {
     id: 'phi-phi',
+    slug: 'phi-phi-islands',
     name: 'Phi Phi Islands',
     group: 'Island',
     tags: ['Iconic', 'Solo', 'Peace', 'Couple', 'Family', 'Friend','Party',],
@@ -169,6 +180,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Maya-Bay',
+    slug: 'maya-bay',
     name: 'Maya Bay',
     group: 'Beach',
     tags: ['Iconic','Swimming', 'Unseen'
@@ -181,6 +193,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Centara-Fire-Show',
+    slug: 'centara-fire-show',
     name: 'Centara Fire Show',
     group: 'Shows',  
     tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend','FireShow'],
@@ -192,6 +205,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Aonang-Fire-show',
+    slug: 'aonang-fire-show',
     name: 'Ao nang Fire show',
     group: 'Shows',
     tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend','FireShow','Ao-Nang Area'],
@@ -203,6 +217,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Aonang-Fire-show-2',
+    slug: 'aonang-fire-show-2',
     name: 'Ao nang Fire show 2',
     group: 'Shows',
     tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend','FireShow'],
@@ -214,6 +229,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Ao-Nang-Landmark-Fire-Show',
+    slug: 'ao-nang-landmark-fire-show',
     name: 'Ao Nang Landmark Fire Show',
     group: 'Shows',
     tags: ['Exciting',  'Fun', 'Night activity','Solo','Friend','FireShow','Ao-Nang Area'],
@@ -229,6 +245,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Ao-Nang-Landmark-Stadium',
+    slug: 'ao-nang-landmark-boxing-stadium',
     name: 'Ao Nang Landmark Boxing Stadium',
     group: 'Shows',
     tags: ['Exciting','Solo','Friend','ThaiBoxing'],
@@ -244,6 +261,7 @@ export const LOCATIONS = [
   },
 {
     id: 'Boxing Stadium',
+    slug: 'krabi-international-boxing-stadium',
     name: 'Krabi International Boxing Stadium',
     group: 'Shows',
     tags: ['Exciting','Solo','Friend','ThaiBoxing'],
@@ -256,6 +274,7 @@ export const LOCATIONS = [
 
   {
     id: 'Ao-nang-krabi-Stadium',
+    slug: 'ao-nang-krabi-stadium',
     name: 'Ao nang krabi Stadium',
     group: 'Shows',
     tags: ['Exciting','Solo','Friend','ThaiBoxing',],
@@ -278,6 +297,7 @@ export const LOCATIONS = [
   // },
   {
     id: 'Pranang-Cave-Kayaking',
+    slug: 'pranang-cave-kayaking',
     name: 'Pranang Cave Kayaking',
     group: 'Kayaking',
     tags: ['Adventure', 'Fun', 'kayaking' ,'Solo','Family', 'Friend'],
@@ -289,6 +309,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Ao-Thalane-Kayak-Krabi',
+    slug: 'ao-thalane-kayak-krabi',
     name: 'Ao Thalane Kayak Krabi',
     group: 'Kayaking',
     tags: ['Adventure','Unsen', 'Fun','Solo','Couple', 'Family', 'Friend'],
@@ -300,6 +321,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Klong-Root-Kayaking',
+    slug: 'klong-root-kayaking',
     name: 'Klong Root Kayaking',
     group: 'Kayaking',
     tags: ['Adventure',  'Jurassic World','Fun','Solo','Couple', 'Family', 'Friend'],
@@ -311,6 +333,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Khaothong-Hill',
+    slug: 'khaothong-hill',
     name: 'Khaothong Hill',
     group: 'cafeAndRestaurant',
     tags: ['Dinner', 'Sunset','Romatic','Couple', 'Family', 'Friend','Sunset'],
@@ -322,6 +345,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Ao-Nang-Beach',
+    slug: 'ao-nang-beach',
     name: 'Ao Nang Beach',
     group: 'Beach',
     tags:'Sunset',
@@ -340,6 +364,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Klong-Muang-Beach',
+    slug: 'klong-muang-beach',
     name: 'Klong Muang Beach',
     group: 'Beach',
     tags: ['Sunset',  'Activities','Solo','Couple', 'Family', 'Friend' ],  
@@ -350,7 +375,8 @@ export const LOCATIONS = [
     shortDescription: 'Very calm and beautiful beach for sunset.'
   },
   {
-    id: 'Cafe',
+    id: 'Cafe-Andalay-Beach',
+    slug: 'cafe-andalay-beach',
     name: 'Andalay Beach Bar & Cafe',
     group: 'cafeAndRestaurant',
     tags: ['Dinner','Sunset','Romatic', 'Couple', 'Family', 'Friend'], 
@@ -362,6 +388,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Tiger-Cave-Temple',
+    slug: 'tiger-cave-temple',
     name: 'Tiger Cave Temple',
     group: 'Viewpoint',
     tags: ['Adventure','Iconic', 'Sun rise', 'Sun Set', 'Krabi view', 'Temple', 'Family', 'Friend'],
@@ -373,6 +400,7 @@ export const LOCATIONS = [
   },
   {
     id: 'phi-phi-view',
+    slug: 'phi-phi-viewpoint',
     name: 'Phi Phi Viewpoint',
     group: 'Viewpoint',
     tags: ['Iconic', 'Solo', 'Peace', 'Couple', 'Family', 'Friend','Party'],
@@ -385,6 +413,7 @@ export const LOCATIONS = [
 
   {
     id: 'Dragons-Crest',
+    slug: 'dragons-crest',
     name: 'Dragon is Crest',
     group: 'Viewpoint',
     tags: ['Adventure', 'Hiking', 'Sun rise', 'Sea of fog','Solo','Friend'],
@@ -397,6 +426,7 @@ export const LOCATIONS = [
   
  {
     id: 'Krabi-Town-Night-Market',
+    slug: 'krabi-town-night-market',
     name: 'Krabi Town Night Market',
     group: 'NightMarket',
     tags: ['Night market', 'Foodie', 'Thai Food','Cheap Food','Solo', 'Peace', 'Couple', 'Family', 'Friend'],
@@ -408,6 +438,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Black-Crab-Night-Market',
+    slug: 'black-crab-night-market',
     name: ' Black Crab Night Market',
     group: 'NightMarket',
     tags: ['Night market', 'Foodie', 'Thai Food','Cheap Food','Solo', 'Peace', 'Couple', 'Family', 'Friend'],
@@ -419,6 +450,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Khao-Khanab-Nam',
+    slug: 'khao-khanab-nam',
     name: 'Khao Khanab Nam',
     group: 'Local',
     tags: ['Couple', 'Family', 'Friend'],
@@ -430,6 +462,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Ko-Klang',
+    slug: 'ko-klang',
     name: 'Ko Klang',
     group: 'Local',
     tags: ['Island','Couple', 'Family', 'Friend'],
@@ -441,6 +474,7 @@ export const LOCATIONS = [
   },
   {
     id: 'Ko-Poda-Beach',
+    slug: 'ko-poda-beach',
     name: 'Ko Poda Beach',
     group: 'Beach',
     tags: ['Island','Couple', 'Family', 'Friend','Couple','4 Islands','Sunset'],
@@ -450,6 +484,80 @@ export const LOCATIONS = [
     highlightTag: 'Adventure Spot',
     shortDescription: 'Local village and thai food.'
   },
+  {
+    id: 'Klong-Sra-Keaw',
+    slug: 'klong-sra-keaw',
+    name: 'Klong Sra Keaw',
+    group: 'Natural Stream',
+    tags: [ 'Hidden Gem', 'Local', 'Kayaking', 'Swimming', 'Clear water'],
+    recommended: false,
+    score: 72,  //'Iconic','Solo', 'Peace', 'Couple', 'Family', 'Friendly'
+    coordinates: [8.162703228149688, 98.8050429109489], 
+    highlightTag: 'Adventure Spot',
+    shortDescription: 'A hidden place in Krabi where you  can see a clear water just like the emeral pool',
+  },
+{
+    id: 'Laem-Chamuk-Khwai',
+    slug: 'laem-chamuk-khwai',
+    name: 'Laem Chamuk Khwai',
+    group: 'Viewpoint',
+    tags: [ 'Hidden Gem', 'Local', 'Swimming', 'Sunset'],
+    recommended: false,
+    score: 76,  //'Iconic','Solo', 'Peace', 'Couple', 'Family', 'Friendly'
+    coordinates: [8.136047447108888, 98.73594616678609], 
+    highlightTag: 'Adventure Spot',
+    shortDescription: 'A small beach with big rock with a good sunset view and adventure',
+  },
+{
+    id: 'Than-Bok-Khorani-National-Park',
+    slug: 'than-bok-khorani-national-park',
+    name: 'Than Bok Khorani National Park',
+    group: 'Waterfall',
+    tags: [ 'Waterfall', 'Cave'],
+    recommended: false,
+    score: 84,  //'Iconic','Solo', 'Peace', 'Couple', 'Family', 'Friendly'
+    coordinates: [8.389115908839937, 98.7351409407345], 
+    highlightTag: 'Peaceful Nature',
+    shortDescription: 'Scenic waterfalls, underground caves & limestone mountain',
+  },
+{
+    id: 'KhongThomNuea-Hot-Stream-Waterfall-Krabi',
+    slug: 'khong-thom-nuea-hot-stream-waterfall-krabi',
+    name: 'Khong Thom Nuea Hot Stream Waterfall Krabi',
+    group: 'Waterfall',
+    tags: [ 'Waterfall', 'Hotspring', 'Relax', 'Nature'],
+    recommended: false,
+    score: 84,  //'Iconic','Solo', 'Peace', 'Couple', 'Family', 'Friendly'
+    coordinates: [7.93167307330806, 99.20620331980848], 
+    highlightTag: 'Relax & Wellness',
+    shortDescription: 'Relax with hotspring waterfall among the forest',
+  },
+{
+    id: 'Emerald-Pool',
+    slug: 'sa-morakot-emerald-pool',
+    name: 'Sa Morakot (Emerald Pool)',
+    group: 'Natural Pool',
+    tags: [ 'Pool', 'Clear water', 'Forest'],
+    recommended: false,
+    score: 89,  //'Iconic','Solo', 'Peace', 'Couple', 'Family', 'Friendly'
+    coordinates: [7.9253052,99.26608], 
+    highlightTag: 'Iconic Nature Spot',
+    shortDescription: 'Emeral water and stunning view in the forrest',
+  },  
+{
+  id: 'Khlong-Root',
+  slug: 'khlong-root',
+  name: 'Khlong Root (Klong Nam Sai)',
+  group: 'Natural Stream',
+  tags: ['Clear Water', 'Kayaking', 'Swimming', 'Forest', 'Family Friendly'],
+  recommended: true,
+  score: 93,
+  coordinates: [8.0965752,98.8065709],
+  highlightTag: 'Top Hidden Gem',
+  shortDescription: 'Crystal-clear stream perfect for kayaking and relaxing',
+},
+
+
 ];
 
 export const GROUPS = ['All', ...new Set(LOCATIONS.map((location) => location.group))];
